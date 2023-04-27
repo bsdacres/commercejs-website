@@ -1,0 +1,34 @@
+.enter {
+  position: fixed;
+  height: 110vh;
+  width: 100vw;
+  background-size: cover;
+  background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a1cf9141-6957-4cd1-a760-ea9f98529897/d2gtaan-3aba6f83-de8b-46ff-a7f7-76925247c342.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2ExY2Y5MTQxLTY5NTctNGNkMS1hNzYwLWVhOWY5ODUyOTg5N1wvZDJndGFhbi0zYWJhNmY4My1kZThiLTQ2ZmYtYTdmNy03NjkyNTI0N2MzNDIucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.V3_Zi4qzk0bysHQN31IJncGX78DkWWJKvMco2aJxmPQ);
+}
+
+.landing {
+  margin: auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-size: cover;
+}
+.landing .img {
+  height: 65vh;
+  width: 73.5vw;
+  border-radius: 20px;
+  background-size: 100%;
+  background-position: bottom 0;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.986)), url(https://cdn.discordapp.com/attachments/274582330469777409/1088213587597738135/IMG_2718.png);
+}
+.landing .collect {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: -moz-fit-content;
+  height: fit-content;
+  gap: 1.5vw;
+  margin: 10px 0;
+  align-items: center;
+  justify-content: center;
+}/*# sourceMappingURL=styles.module.css.map */

@@ -1,0 +1,33 @@
+.footer{
+  box-shadow: 10px black;
+  padding-top: 2vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(169, 173, 173, 0.212);
+ 
+  width: 100vw;
+  
+ 
+
+  div{
+    padding: 1vh;
+  }
+
+  p{
+    padding: 10px;
+  }
+ 
+  a{
+    text-decoration: none;
+    color: rgb(56, 59, 58);
+    margin: 10px;
+    padding: 15px;   
+  }
+
+  a:hover{
+    background-color:  rgb(200, 206, 204);;
+    border-radius: 10px;
+  }
+}

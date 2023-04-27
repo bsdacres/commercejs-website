@@ -1,0 +1,107 @@
+.nav{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 5vh;
+  width: 99%;
+  margin: 0 auto;
+  position: fixed;
+  top: .05px;
+  backdrop-filter: blur(10px);
+  
+
+  
+  .menu{
+    color: rgb(10, 10, 10);
+    background-color: rgba(252, 252, 252, 0.5);
+    height: 85%;
+    width: 100%;
+    text-align: center;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bolder;
+
+    a{
+      text-decoration: none;
+      color: rgb(10, 9, 9);
+      margin: 10px;
+      padding: 15px;   
+    }
+
+    a:hover{
+      background-color:  rgb(200, 206, 204);;
+      border-radius: 10px;
+    }
+    
+    .left {
+        text-align: left;
+        width: 33%;
+        position: absolute;
+        left: 5px;
+    }
+
+    .logo{
+      margin: auto 0;
+      width: 7vh;
+    }
+
+    .right{
+      position: absolute;
+      right: 0px;
+      width: 33%;
+      text-align: right;
+    }
+  }
+}
+
+.collections{
+  background-size:cover;
+  display: flex;
+  flex-wrap: wrap;
+  height: 45vh;
+  width: 32vh;
+  border-radius: 20px;
+  border: 5px solid rgba(255, 255, 255, 0.63);
+  text-align: center;
+  transition: 0.4s ease-in-out;
+}
+
+.collections:hover{
+  transform: translateY(-20px);
+  
+}
+
+
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.733);
+  height: 100vh;
+  width: 100vw;
+  z-index: 6;
+  backdrop-filter: blur(20px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  a{
+    display: flex;
+    flex-direction: column;
+    font-size: 8em;
+    letter-spacing: 10px;
+    gap: 10px;
+    align-self: center;
+    text-transform: uppercase;
+    color: azure;
+    text-align: center;
+    margin: 10px;
+  }
+}
