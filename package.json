@@ -20,6 +20,8 @@
     "motion": "^10.15.5",
     "solid-js": "^1.6.16",
     "solid-start": "^0.2.24",
+    "solid-start-netlify": "^0.2.26",
+    "solid-start-vercel": "^0.2.26",
     "string-strip-html": "^13.2.3",
     "undici": "^5.15.1"
   },
