@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   height: 5vh;
-  width: 99%;
+  width: 99vw;
   margin: 0 auto;
   position: fixed;
   top: 0.05px;
@@ -70,11 +70,11 @@
 }
 
 .modal {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.733);
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   z-index: 6;
   -webkit-backdrop-filter: blur(20px);
@@ -95,4 +95,17 @@
   color: azure;
   text-align: center;
   margin: 10px;
+  transition: 0.5s ease-in-out;
+}
+.modal a:hover {
+  color: transparent;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: rgb(255, 255, 255);
+  scale: 1.2;
+}
+
+@media only screen and (max-width: 600px) {
+  .modal a {
+    font-size: 2em;
+  }
 }/*# sourceMappingURL=styles.module.css.map */

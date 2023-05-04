@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=EBGaramond');
 
+
+
 body {
   font-family: 'EB Garamond';
     background-color:  #FAF9F6;
@@ -7,6 +9,7 @@ body {
     color: #1f1f1e;
     overflow-x: hidden;
     animation: gradient 15s linear infinite;
+    margin: 0;
     
 
 }
@@ -50,6 +53,9 @@ p {
 }
 
 @media (min-width: 480px) {
+  html{
+    width: 100vw;
+  }
   h1 {
     max-width: none;
   }
@@ -59,14 +65,3 @@ p {
   }
 }
 
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}

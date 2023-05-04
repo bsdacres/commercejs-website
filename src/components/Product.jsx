@@ -4,13 +4,26 @@ import { Motion } from '@motionone/solid';
 import { spring, stagger,timeline } from 'motion';
 import commerce from '~/lib/commerce';
 import { createSignal,createEffect } from 'solid-js';
+import ProductPage from '~/routes/Store/ProductPage';
+
 
 
 export default function Product(props) {
+  const [modal, setModel] = createSignal(false)
+  
+  const toggle = () =>{
+    setModel(()=>!modal())
+  }
+
+  
+
 
   return (
-    <a href={props.c} >
-
+ <>
+     <Show when={modal()}>
+      <ProductPage onClick={toggle} />
+    </Show>
+   <A href={props.id}>
     <div class={product.wrapper}>
       <Motion.div 
           hover={{ scale: 1.2 }}
@@ -22,6 +35,7 @@ export default function Product(props) {
         </div>
       </Motion.div>
     </div>  
-    </a>
+  </A> 
+  </>
   );
 }

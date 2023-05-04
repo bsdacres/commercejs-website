@@ -9,6 +9,7 @@
   margin: 3vh 2vh 6vh 2vh;
   font-weight: bold;
   scroll-snap-type: x mandatory;
+  cursor: pointer;
 }
 
 .productdata {
@@ -31,4 +32,12 @@
 a {
   text-decoration: none;
   color: black;
+}
+
+@media only screen and (max-width: 600px) {
+  .product {
+    height: 47vh;
+    margin: 10vh 7vh 6vh 2vh;
+    scale: 1.17;
+  }
 }/*# sourceMappingURL=product.module.css.map */

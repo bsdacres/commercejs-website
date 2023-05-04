@@ -2,6 +2,7 @@
 import { Suspense } from "solid-js";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import { CartProvider } from "./context/CartContext";
 import {
   A,
   Body,
@@ -26,10 +27,12 @@ export default function Root() {
       <Body>
         <Suspense>
           <ErrorBoundary>
+            <CartProvider>
             <Navbar />
-            <Routes>
-              <FileRoutes />
-            </Routes>
+              <Routes>
+                <FileRoutes />
+              </Routes>
+            </CartProvider>
             <Footer />
           </ErrorBoundary>
         </Suspense>

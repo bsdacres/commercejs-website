@@ -15,13 +15,14 @@ export default function Navbar(){
     <Show when={modal()}>
     <Motion.div onclick={toggle} 
     animate={{ opacity: [0, 1] }}
-    transition={{ duration: 1.5,  easing: "ease-in-out" }}
+    transition={{ duration: .7,  easing: "ease-in-out" }}
     
     class={styles.modal}>
       <A href="/store">Store</A>
-      <A href="/">Menu</A>
-      <A href="/store">Menu</A>
-      <A href="/store">Menu</A>
+      <A href="/">About</A>
+      <A href="/store/productpage">Stockists</A>
+      <A target="_blank" href="https://hastiludes.com/">Universe</A>
+      <A href="/contact">Contact</A>
     </Motion.div>
   </Show> 
    <nav class={styles.nav}>
@@ -29,7 +30,7 @@ export default function Navbar(){
       <div class={styles.left}>
         <a  onclick={toggle}>Menu</a>
       </div>
-      <a>covenaunt</a>
+      <A href="/">covenaunt</A>
       <div class={styles.right}>
         <A href="/">Cart</A>
       </div>

@@ -55,6 +55,7 @@ export default function ({ merchant, categories, products }) {
         title="Nono"
         background='https://pbs.twimg.com/media/FLFc-DlXEAY0JRP.jpg'
         />
+        
       </div>
     </Motion.div>
     </> 

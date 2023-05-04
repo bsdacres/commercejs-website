@@ -20,6 +20,7 @@
     "motion": "^10.15.5",
     "solid-js": "^1.6.16",
     "solid-start": "^0.2.24",
+    "string-strip-html": "^13.2.3",
     "undici": "^5.15.1"
   },
   "engines": {
