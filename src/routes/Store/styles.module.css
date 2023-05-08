@@ -152,12 +152,13 @@
     height: fit-content;
     z-index: 1;
     display: flex;
-    background-color: rgba(8, 2, 2, 0.349);
+    background-color: rgba(8, 2, 2, 0);
     -webkit-backdrop-filter: blur(20px);
             backdrop-filter: blur(20px);
     flex-direction: column;
     justify-content: center;
     margin-right: 10px;
+    margin-left: 0;
   }
   .productImg {
     height: 65vh;
@@ -165,11 +166,12 @@
     filter: drop-shadow(0 0mm 2mm rgb(15, 10, 17));
   }
   .productContainer {
-    width: 95%;
+    width: 100%;
     height: -moz-fit-content;
     height: fit-content;
     justify-content: center;
     padding-bottom: 20px;
+    background-color: white;
   }
   .productData {
     text-align: center;
@@ -178,12 +180,11 @@
     justify-content: center;
     align-items: center;
     background-color: rgba(255, 228, 196, 0.233);
-    border-radius: 20px;
+    border-radius: 0 0px 20px 20px;
     width: 100%;
     -webkit-backdrop-filter: blur(20px);
             backdrop-filter: blur(20px);
     gap: 0;
-    margin-right: 13px;
   }
   .productData P {
     font-size: 1em;
