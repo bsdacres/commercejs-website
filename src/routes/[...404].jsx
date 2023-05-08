@@ -11,7 +11,7 @@ export default function NotFound() {
         <a href="https://start.solidjs.com" target="_blank">
           start.solidjs.com
         </a>{" "}
-        to learn how to build SolidStart apps.
+        The page you're looking for doesn't exist.
       </p>
     </main>
   );
