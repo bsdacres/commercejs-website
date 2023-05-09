@@ -1,12 +1,16 @@
-.store {
+.show {
   height: -moz-fit-content;
   height: fit-content;
+}
+
+.store {
   display: flex;
-  justify-content: center;
-  gap: 10px;
+  justify-content: left;
   flex-direction: column;
-  margin-top: 3vh;
+  margin-top: 10vh;
   overflow-x: hidden;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 .store ::-webkit-scrollbar {
   display: none;
@@ -14,15 +18,14 @@
 .store .products {
   display: flex;
   flex-direction: row;
+  scroll-snap-type: x mandatory;
   overflow-x: scroll;
   overflow-y: hidden;
+  margin-left: 0;
+  z-index: 25;
+  padding: 0;
   width: 100%;
-  margin: auto 0;
-  padding: 6vh;
   animation: hover 5s infinite ease-in-out;
-}
-.store .products div {
-  padding-right: 3vw;
 }
 
 @keyframes hover {
@@ -238,6 +241,7 @@
     align-self: center;
     font-size: 2.2em;
     width: 95%;
+    padding-left: 10px;
   }
   .variants a {
     background-color: grey;

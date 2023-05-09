@@ -40,6 +40,7 @@ export default function Store() {
   transition={{ duration: 2, easing: "ease-in-out" }}
   when={products()}
   fallback={<div>Loading...</div>}
+  class ={styles.show}
   >
     <div class={styles.products} ref={element} onwheel={transformScroll}>
       {products().map((product) => (<Product key={product.id} {...product}  />))}   

@@ -13,7 +13,7 @@
   padding: 1vh;
 }
 .footer p {
-  padding: 10px;
+  padding: 5px;
 }
 .footer a {
   text-decoration: none;
@@ -24,4 +24,23 @@
 .footer a:hover {
   background-color: rgb(200, 206, 204);
   border-radius: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .footer {
+    align-items: justify;
+  }
+  .footer a {
+    text-decoration: none;
+    color: rgb(56, 59, 58);
+    margin: 0 10px;
+    padding: 10px;
+  }
+  .footer-links {
+    padding: 100vh;
+    display: flex;
+    height: -moz-fit-content;
+    height: fit-content;
+    align-items: center;
+  }
 }/*# sourceMappingURL=footer.css.map */

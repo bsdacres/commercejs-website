@@ -26,7 +26,7 @@ export default function Product(props) {
    <A href={props.id}>
     <div class={product.wrapper}>
       <Motion.div 
-          hover={{ scale: 1.2 }}
+          hover={{ scale: 1.1 }}
           class={product.product}>
         <img class ={product.img} src={props.image.url} alt='clothing' />
         <div class={product.productdata}> 
