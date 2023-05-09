@@ -23,13 +23,13 @@ export default function Product(props) {
      <Show when={modal()}>
       <ProductPage onClick={toggle} />
     </Show>
-   <A href={props.id}>
+   <A class={product.anchor} href={props.id}>
     <div class={product.wrapper}>
       <Motion.div 
           hover={{ scale: 1.1 }}
           class={product.product}>
         <img class ={product.img} src={props.image.url} alt='clothing' />
-        <div class={product.productdata}> 
+        <div  class={product.productdata}> 
           <p  class="product-title">{props.name}</p>
           <p>{props.price.formatted_with_symbol}</p>
         </div>

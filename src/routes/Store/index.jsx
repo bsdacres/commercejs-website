@@ -43,7 +43,9 @@ export default function Store() {
   class ={styles.show}
   >
     <div class={styles.products} ref={element} onwheel={transformScroll}>
-      {products().map((product) => (<Product key={product.id} {...product}  />))}   
+      <For each={products()}>
+        {(product) => (<Product  {...product}  />)}   
+      </For> 
     </div>
     <div class={styles.scroll}>
       <p >Scroll to view products</p>
