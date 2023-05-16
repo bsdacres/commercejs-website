@@ -6,6 +6,7 @@ import commerce from "~/lib/commerce";
 import ProductPage from "~/routes/Store/ProductPage"
 import { Motion } from "@motionone/solid";
 import { stripHtml } from "string-strip-html";
+import { Title } from "solid-start";
 
 
 
@@ -30,6 +31,7 @@ export default function Products() {
     animate={{ opacity: [0, 1] }}
     transition={{ duration: 3.5, easing: "ease-in-out" }}
     class={styles.params}>
+      <Title>{listing() &&  listing().name}</Title>
         <ProductPage 
         name = {listing() && listing().name}
         image = {listing() && listing().image.url}

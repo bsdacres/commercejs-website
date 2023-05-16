@@ -1,12 +1,3 @@
-.enter{
-  position: fixed;
-  height: 110vh;
-  width: 100vw;
-  background-size: cover;
-  background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a1cf9141-6957-4cd1-a760-ea9f98529897/d2gtaan-3aba6f83-de8b-46ff-a7f7-76925247c342.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2ExY2Y5MTQxLTY5NTctNGNkMS1hNzYwLWVhOWY5ODUyOTg5N1wvZDJndGFhbi0zYWJhNmY4My1kZThiLTQ2ZmYtYTdmNy03NjkyNTI0N2MzNDIucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.V3_Zi4qzk0bysHQN31IJncGX78DkWWJKvMco2aJxmPQ);
-}
-
-
 
 .landing{
   margin: auto 0;
@@ -14,27 +5,79 @@
   flex-direction: column;
   align-items: center;
   background-size: cover;
+  overflow-x: hidden;
+  transition: 3s ease-in-out;
+  text-align: center;
+
+
 
   .img{
-    height: 65vh;
-    width: 73.5vw;
-    border-radius: 20px;
-    background-size: 100%;
-    background-position: bottom 0;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.986)), url(https://cdn.discordapp.com/attachments/274582330469777409/1088213587597738135/IMG_2718.png);
-    
+    margin-top: 7vh;
+    height: 80vh;
+    width: 80%;
+    border-radius: 30px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    position: relative;
+    background-size: cover;
+    background-position: -10;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.986)), url(https://video-images.vice.com/articles/5a8d90442df7e20007d799bc/lede/1519229361187-GettyImages-922114138.jpeg?crop=1xw:0.3746xh;0xw,0.0736xh&resize=1200:*);
+ 
+
+    .calltoaction{
+      color: aliceblue;
+      text-align: center;
+      margin-bottom: 5%;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      border: 4px solid white;
+      padding: 25px;
+      border-radius: 20px;
+
+    }
   }
 
   .collect{
-    display: flex;
-    flex-direction: row;
-    width: 100vw;
-    height: fit-content;
-    gap: 1.5vw;
-    margin: 10px 0;
+    background-color: rgba(32, 32, 31, 0.068);
+    overflow-x: hidden;
     align-items: center;
     justify-content: center;
+    padding: 8vh;
+    margin-bottom: 5vh;
+    padding-top: 0;   
+    width: 100vw;
     
+  
+  
+    div{
+    display: flex;
+    height: 50vh;
+    width: 80%;
+    gap: 3.6vw;
+    align-content: center;
+    justify-content: center;
+    margin: 0 auto;
+    
+  }  
   }
 }
 
+
+@media only screen and (max-width: 600px) {
+ 
+  .collect{
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+
+    div{
+      position: relative;
+      display: flex;
+      flex-direction: column-reverse;
+      height: 200vh;
+      background-color: rgb(6, 32, 32);
+    }
+    
+  }
+}

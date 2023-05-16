@@ -55,12 +55,23 @@ a{
 @media only screen and (max-width: 600px) {
   .anchor{
     height: 82vh;
+    display: flex;
+    flex-direction: row;
+    margin-top: 3vh;
+    
+  }
+  
+  .wrapper{
+    border: solid 6px rgba(255, 255, 255, 0.007);
+    width: 95vw;
+    display: flex;
+    justify-content: center;
+    
   }
   
   .product {
-    height: 60vh;
-    margin: 10vh 7vh 6vh 2vh;
-    padding-left: 13vw;
+    height: 100%;
+    margin-top: 8vh;
   }
 
   .productdata{
@@ -69,12 +80,10 @@ a{
     height: 100%;
     width: 100%;
     text-align: center;
-    margin-left: 10vw;
     
     p{
       font-size: smaller;
       height: fit-content;
-      margin: 25px;
     }
   }
 }

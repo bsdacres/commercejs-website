@@ -6,6 +6,7 @@ import CollectionsPreview from "~/components/CollectionsPreview";
 import { onMount } from "solid-js";
 import  styles  from "./styles.module.css"
 import { Motion } from "@motionone/solid";
+import ProductPage from "./Store/ProductPage";
 
 onMount(async ()=>{
 const merchant = await commerce.merchants.about();
@@ -34,29 +35,34 @@ export default function ({ merchant, categories, products }) {
     
     <Motion.div
     class={styles.landing}>
-      <h1>Que sueñes con los angelitos</h1>
-      <div draggable class={styles.img}  alt='landing-image'/>
-      <p>"An oeuvre of epic poetry, sung through fabric, narrated by Brian Dacres."</p>
+      <div draggable class={styles.img}  alt='landing-image'>
+        <A class={styles.calltoaction} href="/store"><div >Discover the Fable</div></A>
+      </div> 
+      <p>An oeuvre of <em>epic poetry</em>, sung through <em>fabric</em>, narrated by Brian Dacres</p>
+      <hr></hr>
       <div class={styles.collect}>
+        <h1>Explore the COllections</h1>
+        <div>
         <CollectionsPreview
-        title="Nono"
-        background='https://pbs.twimg.com/media/FdA7n0-XoAA1FBB?format=jpg&name=large'
+        title="Canto I: Cybele"
+        background='https://cdn.discordapp.com/attachments/883034757376639036/1105714847934599228/IMG_1429_1.jpg'
         />
         <CollectionsPreview
         draggable
-        title="Nono"
-        background='https://pbs.twimg.com/media/FLFc-DlXEAY0JRP.jpg'
+        title="Canto II: Abyssal Hymns"
+        background='https://cdn.discordapp.com/attachments/883034757376639036/1105714094482391100/d71c8afbb30a4e738193954ebd82de22.gif'
         />
         <CollectionsPreview
-        title="Nono"
-        background='https://pbs.twimg.com/media/FLFc-DlXEAY0JRP.jpg'
+        title="Canto III: A Woodland Tragedy"
+        background='https://cdn.discordapp.com/attachments/883034757376639036/1107536476280995901/FOR-INSTAGRAM-5.jpg'
         />
         <CollectionsPreview
-        title="Nono"
-        background='https://pbs.twimg.com/media/FLFc-DlXEAY0JRP.jpg'
+        title="Canto IV: Ode to Aether"
+        background='https://discord.com/channels/@me/883034757376639036'
         />
-        
+        </div>
       </div>
+      
     </Motion.div>
     </> 
   );

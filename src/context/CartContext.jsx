@@ -1,28 +1,21 @@
-import { useContext, createContext, createSignal} from "solid-js";
+import { useContext, createContext, createSignal, createEffect, createResource} from "solid-js";
 import { createStore } from "solid-js/store";
+import commerce from "~/lib/commerce";
 
+export const CartContext = createContext();
 
+const fetchCart = async () => {
+  commerce.cart.retrieve()
+};
 
-
-export const CartContext = createContext([{ count: 0 }, {}]);
-
-export function CartProvider(props) {
-  const [state, setState] = createStore({ count: props.count || 0 });
-  const counter = [
-    state,
-    {
-      increment() {
-        setState("count", (c) => c + 1);
-      },
-      decrement() {
-        setState("count", (c) => c - 1);
-      },
-    },
-  ];
+export const CartProvider = (props) => {
+  const [cart, setCart] = createSignal();
+  const [user] = createResource(cart, fetchCart);
+  console.log(user())
 
   return (
-    <CartContext.Provider value={counter}>
+    <CartContext.Provider >
       {props.children}
     </CartContext.Provider>
   );
-}
+};

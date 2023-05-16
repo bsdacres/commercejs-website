@@ -1,21 +1,20 @@
-import { createEffect, createSignal } from "solid-js"
+import { createEffect, createSignal, useContext } from "solid-js"
 import styles from "./styles.module.css"
 import commerce from "~/lib/commerce"
 import { Motion } from "@motionone/solid"
+import { CartContext, addToCart } from "~/context/CartContext"
 
 
 
 export default function ProductPage(props){
   const [quantity, setQuantity] = createSignal(1)
   const [selected, setSelected] = createSignal(null)
-  createEffect(()=>{
-    
-  commerce.cart.retrieve().then((cart) => console.log(cart))
-  })
-  
-  function handleAddtoCart(){
-    commerce.cart.add(`${props.id}, ${quantity}, {${props.variants} : ${selected},}`)
+  async function addToCart(productId, quantity) {
+    const item = await commerce.cart.add(productId, quantity);
+    setCart(item.cart);
   }
+  console.log(selected())
+
 
 
   return(
@@ -49,7 +48,7 @@ export default function ProductPage(props){
           </div>
           <div class={styles.button}>
             <input type="number" value={quantity()}  onChange={e => setQuantity(e.target.value)} onchange={console.log(quantity)} />
-            <p onclick={handleAddtoCart}>Add to Shopping Bag  </p>
+            <p onclick={addToCart(selected,quantity )} >Add to Shopping Bag  </p>
           </div>
         </Motion.div>
       </div>

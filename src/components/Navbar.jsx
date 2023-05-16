@@ -20,7 +20,7 @@ export default function Navbar(){
     class={styles.modal}>
       <A href="/store">Store</A>
       <A href="/">About</A>
-      <A href="/store/productpage">Stockists</A>
+      <A href="/store">Stockists</A>
       <A target="_blank" href="https://hastiludes.com/">Universe</A>
       <A href="/contact">Contact</A>
     </Motion.div>
