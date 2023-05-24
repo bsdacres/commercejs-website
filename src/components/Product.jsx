@@ -1,28 +1,13 @@
 import { A } from '@solidjs/router';
 import product from './product.module.css'
 import { Motion } from '@motionone/solid';
-import { spring, stagger,timeline } from 'motion';
-import commerce from '~/lib/commerce';
-import { createSignal,createEffect } from 'solid-js';
-import ProductPage from '~/routes/Store/ProductPage';
+
 
 
 
 export default function Product(props) {
-  const [modal, setModel] = createSignal(false)
-  
-  const toggle = () =>{
-    setModel(()=>!modal())
-  }
-
-  
-
-
   return (
  <>
-     <Show when={modal()}>
-      <ProductPage onClick={toggle} />
-    </Show>
    <A class={product.anchor} href={props.id}>
     <div class={product.wrapper}>
       <Motion.div 

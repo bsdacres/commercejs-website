@@ -32,8 +32,8 @@ export default function Root() {
               <Routes>
                 <FileRoutes />
               </Routes>
+              <Footer />
             </CartProvider>
-            <Footer />
           </ErrorBoundary>
         </Suspense>
         <Scripts />

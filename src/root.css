@@ -28,6 +28,13 @@ body::-webkit-scrollbar-thumb {
   outline: 1px solid slategrey;
 }
 
+button{
+  font-family: 'EB Garamond';
+  transition: .5s ease-in-out;
+}
+button:active{
+  background-color: rgb(157, 154, 154);
+}
 
 
 main {

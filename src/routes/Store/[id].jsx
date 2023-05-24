@@ -14,6 +14,7 @@ export default function Products() {
   const [listing, setListing] = createSignal(undefined)
   const [desc, setDesc] = createSignal(undefined)
   const [variants, setVariants] = createSignal(undefined)
+  const [group, setGroup] = createSignal(undefined)
   const page = useParams();
   var regex = /(<([^>]+)>)/ig;
   
@@ -21,8 +22,10 @@ export default function Products() {
     commerce.products.retrieve(page.id).then((res) => {
       setListing(res);
       setVariants(res.variant_groups[0].options)
+      setGroup(res.variant_groups[0].id)
       console.log(res)
       console.log(variants())
+      console.log(group())
       console.log(variants().name)
     });
   })
@@ -31,13 +34,14 @@ export default function Products() {
     animate={{ opacity: [0, 1] }}
     transition={{ duration: 3.5, easing: "ease-in-out" }}
     class={styles.params}>
-      <Title>{listing() &&  listing().name}</Title>
+      <Title>Covenaunt | {listing() &&  listing().name}</Title>
         <ProductPage 
         name = {listing() && listing().name}
         image = {listing() && listing().image.url}
         price = {listing() && listing().price.formatted_with_symbol}
         description = {listing() && listing().description.replaceAll(regex, "")}
         variants = {variants() && variants()}
+        id = {listing() && listing().id}
         />
       </Motion.div>
   )

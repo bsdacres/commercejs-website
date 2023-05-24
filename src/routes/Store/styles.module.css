@@ -44,22 +44,23 @@
   width: 100vw;
   height: 94vh;
   z-index: 1;
-  background-color: rgba(248, 244, 244, 0.349);
   -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
   display: flex;
   justify-content: center;
   margin-top: 6vh;
+  align-content: center;
 }
 
 .productImg {
   height: 80vh;
   border-radius: 20px;
+  margin-right: 2vw;
   filter: drop-shadow(0 0mm 2mm rgb(15, 10, 17));
 }
 
 .productContainer {
-  width: 70vw;
+  width: 57vw;
   height: 80vh;
   display: flex;
   flex-wrap: wrap;
@@ -67,22 +68,24 @@
   -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
   border-radius: 20px;
-  margin-left: 3vw;
-  margin-top: 4vh;
+  margin-top: 6vh;
 }
 
 .productData {
-  margin-left: 5%;
   width: 40%;
   position: relative;
+  justify-items: center;
+  height: -moz-fit-content;
+  height: fit-content;
+  align-self: center;
 }
 .productData P {
-  font-size: 1.7em;
+  font-size: 1.5em;
 }
 
 .button {
   color: rgb(218, 218, 218);
-  border-radius: 20px 20px 20px 20px;
+  border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.842);
   display: flex;
   flex-direction: row;
@@ -214,30 +217,20 @@
   }
   .button {
     color: rgb(218, 218, 218);
-    border-radius: 20px 20px 20px 20px;
-    background-color: rgba(0, 0, 0, 0.842);
-    display: flex;
-    flex-direction: row;
+    border-radius: 20px;
     -webkit-backdrop-filter: blur(20px);
             backdrop-filter: blur(20px);
-    font-size: 0.5em;
-    align-items: center;
-    border: solid 1px black;
-    margin: 10px;
-    text-align: center;
+    font-size: 0.7em;
+    text-align: right;
     width: 50vw;
     height: 7vh;
   }
+  .button p {
+    text-align: center;
+    width: 50vw;
+  }
   .button :hover {
     cursor: pointer;
-  }
-  .button input {
-    border-radius: 20px 0px 0px 20px;
-    text-align: center;
-    font-size: larger;
-    height: 95%;
-    width: 15%;
-    background-color: rgb(238, 243, 241);
   }
   .variants {
     display: flex;
