@@ -27,7 +27,7 @@ export default function Cart(){
     animate={{ x: [2000, 1] } }
     transition={{ duration: 1, easing: "ease-in-out" }}
     class={styles.lineContainer}>
-      <For each={lineItems.line_items} fallback={<div>Your Cart is Empty</div>}>
+      <For each={lineItems.line_items} fallback={<div class={styles.fallback}>Your Cart is Empty</div>}>
           {(line) => (<LineComponent  {...line}  />)}   
       </For>
     </Motion.div> 
