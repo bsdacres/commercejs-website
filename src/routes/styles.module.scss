@@ -8,6 +8,7 @@
   overflow-x: hidden;
   transition: 3s ease-in-out;
   text-align: center;
+<<<<<<< HEAD
   height: fit-content;
   width: 100vw;
 
@@ -16,10 +17,22 @@
     height: 100vh;
     width: 100%;
     border-radius: 20px;
+=======
+
+
+
+  .img{
+    margin-top: 7vh;
+    height: 80vh;
+    width: 80%;
+    border-radius: 30px;
+    display: flex;
+>>>>>>> 4e15d29344ed1b3b45edb73481549dc785737a19
     align-items: end;
     justify-content: center;
     position: relative;
     background-size: cover;
+<<<<<<< HEAD
   
 
     .gradient{
@@ -51,18 +64,33 @@
       object-fit: cover;
     }
     .calltoaction{
+=======
+    background-position: -10;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.986)), url(https://video-images.vice.com/articles/5a8d90442df7e20007d799bc/lede/1519229361187-GettyImages-922114138.jpeg?crop=1xw:0.3746xh;0xw,0.0736xh&resize=1200:*);
+ 
+
+    .calltoaction{
+      color: aliceblue;
+>>>>>>> 4e15d29344ed1b3b45edb73481549dc785737a19
       text-align: center;
       margin-bottom: 5%;
       text-transform: uppercase;
       letter-spacing: 2px;
+<<<<<<< HEAD
       border: 4px solid rgb(20, 11, 11);
       padding: 25px;
       border-radius: 20px;
       color: rgb(252, 241, 241);
+=======
+      border: 4px solid white;
+      padding: 25px;
+      border-radius: 20px;
+>>>>>>> 4e15d29344ed1b3b45edb73481549dc785737a19
 
     }
   }
 
+<<<<<<< HEAD
   .collect{ 
     overflow-x: hidden;
     align-items: center;
@@ -70,22 +98,44 @@
     width: 70%;
     
     
+=======
+  .collect{
+    background-color: rgba(32, 32, 31, 0.068);
+    overflow-x: hidden;
+    align-items: center;
+    justify-content: center;
+    padding: 8vh;
+    margin-bottom: 5vh;
+    padding-top: 0;   
+    width: 100vw;
+    
+>>>>>>> 4e15d29344ed1b3b45edb73481549dc785737a19
   
   
     div{
     display: flex;
+<<<<<<< HEAD
     height: 60vh;
     width: 100%;
     align-content: center;
     justify-content: center;
     margin: 0 auto;
     gap: 1vh;
+=======
+    height: 50vh;
+    width: 80%;
+    gap: 3.6vw;
+    align-content: center;
+    justify-content: center;
+    margin: 0 auto;
+>>>>>>> 4e15d29344ed1b3b45edb73481549dc785737a19
     
   }  
   }
 }
 
 
+<<<<<<< HEAD
 
 
 
@@ -209,4 +259,22 @@
       }
     }
   }
+=======
+@media only screen and (max-width: 600px) {
+ 
+  .collect{
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+
+    div{
+      position: relative;
+      display: flex;
+      flex-direction: column-reverse;
+      height: 200vh;
+      background-color: rgb(6, 32, 32);
+    }
+    
+  }
+>>>>>>> 4e15d29344ed1b3b45edb73481549dc785737a19
 }

@@ -7,7 +7,10 @@ import { onMount } from "solid-js";
 import  styles  from "./styles.module.css"
 import { Motion } from "@motionone/solid";
 import ProductPage from "./Store/ProductPage";
+<<<<<<< HEAD
 import Product from "~/components/Product";
+=======
+>>>>>>> 4e15d29344ed1b3b45edb73481549dc785737a19
 
 onMount(async ()=>{
 const merchant = await commerce.merchants.about();
@@ -35,6 +38,7 @@ export default function ({ merchant, categories, products }) {
   <>
     
     <Motion.div
+<<<<<<< HEAD
     class={styles.landing}
     animate={{ width: [0, 100] } }
     transition={{ duration: 3, easing: "ease-in-out" }}
@@ -65,6 +69,19 @@ export default function ({ merchant, categories, products }) {
         <div>
         <CollectionsPreview
         title="Canto I: Exordium"
+=======
+    class={styles.landing}>
+      <div draggable class={styles.img}  alt='landing-image'>
+        <A class={styles.calltoaction} href="/store"><div >Discover the Fable</div></A>
+      </div> 
+      <p>An oeuvre of <em>epic poetry</em>, sung through <em>fabric</em>, narrated by Brian Dacres</p>
+      <hr></hr>
+      <div class={styles.collect}>
+        <h1>Explore the COllections</h1>
+        <div>
+        <CollectionsPreview
+        title="Canto I: Cybele"
+>>>>>>> 4e15d29344ed1b3b45edb73481549dc785737a19
         background='https://cdn.discordapp.com/attachments/883034757376639036/1105714847934599228/IMG_1429_1.jpg'
         />
         <CollectionsPreview
@@ -78,7 +95,11 @@ export default function ({ merchant, categories, products }) {
         />
         <CollectionsPreview
         title="Canto IV: Ode to Aether"
+<<<<<<< HEAD
         background='https://cdn.discordapp.com/attachments/883034757376639036/1107536477149200424/IMG_2847-12.jpg'
+=======
+        background='https://discord.com/channels/@me/883034757376639036'
+>>>>>>> 4e15d29344ed1b3b45edb73481549dc785737a19
         />
         </div>
       </div>
