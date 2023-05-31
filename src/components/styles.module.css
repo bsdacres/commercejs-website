@@ -6,7 +6,6 @@
   height: 5vh;
   align-self: center;
   justify-self: center;
-<<<<<<< HEAD
   width: 100vw;
   position: fixed;
   top: 0.1vh;
@@ -22,25 +21,6 @@
   background-color: transparent;
   height: 100%;
   width: 71%;
-=======
-  width: 92vw;
-  position: fixed;
-  top: 0.5vh;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-  border-radius: 20px;
-  z-index: 5;
-  margin-left: 5vw;
-}
-.nav .shipping {
-  background-color: blu;
-}
-.nav .menu {
-  color: rgb(10, 10, 10);
-  background-color: rgba(252, 252, 252, 0.226);
-  height: 100%;
-  width: 100%;
->>>>>>> 4e15d29344ed1b3b45edb73481549dc785737a19
   text-align: center;
   display: flex;
   flex-direction: row;
@@ -92,7 +72,6 @@
   background-size: cover;
   display: flex;
   flex-wrap: wrap;
-<<<<<<< HEAD
   text-align: center;
   align-items: end;
   justify-content: center;
@@ -127,35 +106,6 @@
   border-radius: 20px;
   font-size: small;
   color: rgb(0, 0, 0);
-=======
-  height: 45vh;
-  width: 32vh;
-  border-radius: 600px 600px 0 0;
-  text-align: center;
-  align-items: end;
-  justify-content: center;
-  transition: 100s ease-in-out;
-  border: 10px black solid;
-}
-.collections h1 {
-  justify-content: center;
-  align-content: center;
-  width: 100%;
-  background-color: rgba(255, 255, 255, 0.185);
-  -webkit-backdrop-filter: blur(3px);
-          backdrop-filter: blur(3px);
-  padding: 16px;
-  width: 75%;
-  border-radius: 20px;
-  margin-bottom: 10%;
-  font-size: medium;
-  color: rgb(255, 255, 255);
-  letter-spacing: 1px;
-}
-
-.collections:hover {
-  background-size: 150%;
->>>>>>> 4e15d29344ed1b3b45edb73481549dc785737a19
 }
 
 .modal {
@@ -199,20 +149,12 @@
   flex-direction: column;
   width: 20vw;
   position: fixed;
-<<<<<<< HEAD
   bottom: 0;
   right: 0;
   background-color: rgb(44, 43, 42);
   padding: 2.5vw;
   border-radius: 0 0 0px 20PX;
   z-index: 50;
-=======
-  bottom: 1vh;
-  right: 0;
-  background-color: rgba(250, 235, 215, 0.233);
-  padding: 2.5vw;
-  border-radius: 20px;
->>>>>>> 4e15d29344ed1b3b45edb73481549dc785737a19
 }
 .checkout .subtotal {
   color: white;
@@ -233,10 +175,7 @@
   border-radius: 20px;
   font-size: large;
   margin: auto 0;
-<<<<<<< HEAD
   color: black;
-=======
->>>>>>> 4e15d29344ed1b3b45edb73481549dc785737a19
 }
 .checkout a :hover {
   background-color: aquamarine;
@@ -259,30 +198,18 @@
 }
 .cart .lineContainer {
   background-color: rgba(7, 5, 2, 0.425);
-<<<<<<< HEAD
   width: 25VW;
   position: absolute;
   top: 0;
   right: 0;
   height: 79vh;
   border-radius: 20px 0PX 0 0;
-=======
-  width: 25vw;
-  position: absolute;
-  right: 0;
-  height: 99vh;
-  border-radius: 20px;
->>>>>>> 4e15d29344ed1b3b45edb73481549dc785737a19
 }
 .cart .lineContainer .lineitem {
   position: relative;
   display: flex;
   flex-direction: row;
-<<<<<<< HEAD
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.075), rgba(0, 0, 0, 0));
-=======
-  background-color: rgba(0, 0, 0, 0.658);
->>>>>>> 4e15d29344ed1b3b45edb73481549dc785737a19
   color: rgb(253, 253, 253);
   text-transform: capitalize;
   text-align: left;
@@ -290,10 +217,7 @@
   height: -moz-fit-content;
   height: fit-content;
   line-height: 0;
-<<<<<<< HEAD
   margin-bottom: 5VH;
-=======
->>>>>>> 4e15d29344ed1b3b45edb73481549dc785737a19
   border-radius: 20px;
   align-items: center;
 }
@@ -338,20 +262,12 @@
     margin-left: 0;
     width: 100vw;
   }
-<<<<<<< HEAD
   .nav .menu {
     width: 100%;
   }
   .collections {
     width: 100%;
     height: 70vh;
-=======
-  .collections {
-    width: 100%;
-    min-height: 70;
-    height: -moz-fit-content;
-    height: fit-content;
->>>>>>> 4e15d29344ed1b3b45edb73481549dc785737a19
   }
   .modal a {
     font-size: 2em;
@@ -421,21 +337,14 @@
     color: rgb(253, 253, 253);
     text-transform: capitalize;
     text-align: left;
-<<<<<<< HEAD
     width: 100%;
-=======
-    width: 100vw;
->>>>>>> 4e15d29344ed1b3b45edb73481549dc785737a19
     height: -moz-fit-content;
     height: fit-content;
     line-height: 0;
     border-radius: 20px;
     align-items: center;
-<<<<<<< HEAD
     margin: 2%;
     margin-right: 6%;
-=======
->>>>>>> 4e15d29344ed1b3b45edb73481549dc785737a19
   }
   .cart .lineContainer .lineitem p {
     margin-top: 0;

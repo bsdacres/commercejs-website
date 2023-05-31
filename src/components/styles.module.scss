@@ -6,7 +6,6 @@
   height: 5vh;
   align-self: center;
   justify-self: center;
-<<<<<<< HEAD
   width: 100vw;
   position: fixed;
   top: .1vh;
@@ -15,36 +14,14 @@
   backdrop-filter: blur(10px);
   border-radius: 20px;
   font-size: medium;
-=======
-  width: 92vw;
-  position: fixed;
-  top: .5vh;
-
-  backdrop-filter: blur(10px);
-  border-radius: 20px;
-  z-index: 5;
-  margin-left: 5vw;
-
-  .shipping{
-    background-color:blu ;
-  } 
->>>>>>> 4e15d29344ed1b3b45edb73481549dc785737a19
   
 
   
   .menu{
-<<<<<<< HEAD
     color: rgb(255, 255, 255);
     background-color: transparent;
     height: 100%;
     width: 71%;
-=======
-    color: rgb(10, 10, 10);
-   
-    background-color: rgba(252, 252, 252, 0.226);
-    height: 100%;
-    width: 100%;
->>>>>>> 4e15d29344ed1b3b45edb73481549dc785737a19
     text-align: center;
     display: flex;
     flex-direction: row;
@@ -61,11 +38,7 @@
     a{
       text-decoration: none;
    
-<<<<<<< HEAD
       color: rgb(255, 255, 255);
-=======
-      color: rgb(10, 9, 9);
->>>>>>> 4e15d29344ed1b3b45edb73481549dc785737a19
       margin: 10px;
       padding: 15px;   
     }
@@ -74,10 +47,7 @@
       background-color:  rgb(200, 206, 204);;
       border-radius: 10px;
       -webkit-text-stroke: 2px white solid;
-<<<<<<< HEAD
       
-=======
->>>>>>> 4e15d29344ed1b3b45edb73481549dc785737a19
     }
     
     .left {
@@ -114,7 +84,6 @@
   background-size:cover;
   display: flex;
   flex-wrap: wrap;
-<<<<<<< HEAD
   text-align: center;
   align-items: end;
   justify-content: center;
@@ -149,36 +118,6 @@
         color: rgb(0, 0, 0);
       }
     }
-=======
-  height: 45vh;
-  width: 32vh;
-  border-radius:  600px 600px 0 0;
-  text-align: center;
-  align-items: end;
-  justify-content: center;
-  transition: 100s ease-in-out;
-  border: 10px black solid;
-
-    h1{
-      justify-content: center;
-      align-content: center;
-      width: 100%;
-      background-color: rgba(255, 255, 255, 0.185);
-      backdrop-filter: blur(3px);
-      padding: 16px;
-      width: 75%;
-      border-radius: 20px;
-      margin-bottom: 10%;
-      font-size: medium;
-      color: rgb(255, 255, 255);
-      letter-spacing: 1px;
-    }
-  
-}
-
-.collections:hover{
-  background-size: 150%;
->>>>>>> 4e15d29344ed1b3b45edb73481549dc785737a19
   
 }
 
@@ -228,20 +167,12 @@
   flex-direction: column;
   width: 20vw;
   position: fixed;
-<<<<<<< HEAD
   bottom: 0;
   right: 0;
   background-color: rgb(44, 43, 42);
   padding: 2.5vw;
   border-radius:  0  0 0px 20PX;
   z-index: 50;
-=======
-  bottom: 1vh;
-  right: 0;
-  background-color: rgba(250, 235, 215, 0.233);
-  padding: 2.5vw;
-  border-radius: 20px;
->>>>>>> 4e15d29344ed1b3b45edb73481549dc785737a19
   
 
   .subtotal{
@@ -267,10 +198,7 @@
     border-radius: 20px;
     font-size: large;
     margin: auto 0;
-<<<<<<< HEAD
     color: black;
-=======
->>>>>>> 4e15d29344ed1b3b45edb73481549dc785737a19
 
     :hover{
       background-color: aquamarine;
@@ -295,20 +223,12 @@
   
   .lineContainer{
     background-color: rgba(7, 5, 2, 0.425);
-<<<<<<< HEAD
     width: 25VW;
     position: absolute;
     top: 0;
     right: 0;
     height: 79vh;
     border-radius: 20px 0PX 0 0;
-=======
-    width: 25vw;
-    position: absolute;
-    right: 0;
-    height: 99vh;
-    border-radius: 20px;
->>>>>>> 4e15d29344ed1b3b45edb73481549dc785737a19
 
  
     
@@ -317,21 +237,14 @@
       position: relative;
       display: flex;
       flex-direction: row;
-<<<<<<< HEAD
       background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.075), rgba(0, 0, 0, 0));
-=======
-      background-color: rgba(0, 0, 0, 0.658);
->>>>>>> 4e15d29344ed1b3b45edb73481549dc785737a19
       color: rgb(253, 253, 253);
       text-transform: capitalize;
       text-align: left;
       width: 25vw;
       height: fit-content;
       line-height: 0;
-<<<<<<< HEAD
       margin-bottom: 5VH;
-=======
->>>>>>> 4e15d29344ed1b3b45edb73481549dc785737a19
       border-radius: 20px;
       align-items: center;
 
@@ -381,23 +294,15 @@
   .nav{
     margin-left: 0;
     width: 100vw;
-<<<<<<< HEAD
 
     .menu{
       width: 100%;
     }
-=======
->>>>>>> 4e15d29344ed1b3b45edb73481549dc785737a19
   }
   
   .collections{
     width: 100%;
-<<<<<<< HEAD
     height: 70vh;
-=======
-    min-height: 70;
-    height: fit-content;
->>>>>>> 4e15d29344ed1b3b45edb73481549dc785737a19
   }
   
   .modal{
@@ -481,20 +386,13 @@
         color: rgb(253, 253, 253);
         text-transform: capitalize;
         text-align: left;
-<<<<<<< HEAD
         width: 100%;
-=======
-        width: 100vw;
->>>>>>> 4e15d29344ed1b3b45edb73481549dc785737a19
         height: fit-content;
         line-height: 0;
         border-radius: 20px;
         align-items: center;
-<<<<<<< HEAD
         margin: 2%;
         margin-right: 6%;
-=======
->>>>>>> 4e15d29344ed1b3b45edb73481549dc785737a19
   
         p{
           margin-top: 0;
