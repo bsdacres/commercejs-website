@@ -19,7 +19,7 @@ export default function Navbar(){
   <>
     <Show when={modal()}>
     <Motion.div onclick={toggle} 
-    animate={{ opacity: [0, 1] }}
+    animate={{ opacity: [.01, 1] }}
     transition={{ duration: .7,  easing: "ease-in-out" }}
     class={styles.modal}>
       <A href="/store">Store</A>
@@ -35,7 +35,7 @@ export default function Navbar(){
    <nav class={styles.nav}>
     <div class={styles.menu}>
       <div class={styles.left}>
-        <a  onclick={toggle}>Menu</a>
+        <a onclick={toggle}>Menu</a>
       </div>
       <A href="/">covenaunt</A>
       <div class={styles.right}>
