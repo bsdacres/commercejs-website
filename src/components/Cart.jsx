@@ -33,21 +33,13 @@ export default function Cart(){
     </Motion.div> 
     <Motion.div 
         animate={{ x: [2000, 1] } }
-<<<<<<< HEAD
         transition={{ duration: 1, easing: "ease-in-out" }}
-=======
-        transition={{ duration: 1.4, easing: "ease-in-out" }}
->>>>>>> 4e15d29344ed1b3b45edb73481549dc785737a19
         class={styles.checkout}>
         <div class={styles.subtotal}>
           <p class={styles.name}>Subtotal:</p>
           <p class={styles.amount}>{total.formatted_with_code}</p>
         </div>
-<<<<<<< HEAD
         <a href={lineItems.hosted_checkout_url}>Proceed to Checkout</a> 
-=======
-        <a >Proceed to Checkout</a> 
->>>>>>> 4e15d29344ed1b3b45edb73481549dc785737a19
       </Motion.div>
    </div> 
   )

@@ -30,12 +30,7 @@ export default function Navbar(){
     </Motion.div>
   </Show> 
   <Show when={viewCart()}>
-<<<<<<< HEAD
-    <div onclick={() => SetViewCart(false)} class={styles.close} >Close</div>
-    <Cart /> 
-=======
     <Cart onclick={setCartState(false)}/>
->>>>>>> 4e15d29344ed1b3b45edb73481549dc785737a19
   </Show>
    <nav class={styles.nav}>
     <div class={styles.menu}>
