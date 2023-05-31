@@ -1,22 +1,23 @@
-import { createEffect, createSignal } from "solid-js"
+import { createEffect, createSignal, useContext } from "solid-js"
 import styles from "./styles.module.css"
 import commerce from "~/lib/commerce"
 import { Motion } from "@motionone/solid"
+import { useCartContext } from "~/context/CartContext"
+import { createStore } from "solid-js/store"
 
 
 
 export default function ProductPage(props){
   const [quantity, setQuantity] = createSignal(1)
-  const [selected, setSelected] = createSignal(null)
-  createEffect(()=>{
-    
-  commerce.cart.retrieve().then((cart) => console.log(cart))
-  })
+  const [selected, setSelected] = createStore(null)
+  const { cart, setCart } = useCartContext()
   
-  function handleAddtoCart(){
-    commerce.cart.add(`${props.id}, ${quantity}, {${props.variants} : ${selected},}`)
+  function addtoCart(id, amount, variant ){
+    commerce.cart.add(id, amount, variant).then(response => setCart(response)).catch(
+      console.log('there was an error')
+    )
+    console.log(cart)
   }
-
 
   return(
     <div class={styles.productPage}>
@@ -28,7 +29,7 @@ export default function ProductPage(props){
         <Motion.div 
           animate={{ x: [1000, 0] }}
           transition={{ duration: 2 , easing: "ease-in-out" }}
-        class={styles.productData}>
+          class={styles.productData}>
           <h1 class={styles.prodtitle}>{props.name}</h1>
           <p>{props.price}</p>
           <div>
@@ -43,14 +44,13 @@ export default function ProductPage(props){
             </p>
           </div>
           <div class={styles.variants}>
-          <For each={props.variants} fallback={<div></div>}>
-              {(variant) => <a onclick={() => setSelected(variant.id)} >{variant.name}</a>}
-          </For>
+              <For each={props.variants} fallback={<div></div>}>
+                  {(variant) => <option onclick={() => setSelected(variant.id)} >{variant.name}</option>}
+              </For>
           </div>
-          <div class={styles.button}>
-            <input type="number" value={quantity()}  onChange={e => setQuantity(e.target.value)} onchange={console.log(quantity)} />
-            <p onclick={handleAddtoCart}>Add to Shopping Bag  </p>
-          </div>
+          <button onclick={() => addtoCart(props.id, quantity,   )} class={styles.button}>
+            <p>Add to Shopping Bag</p>
+          </button>
         </Motion.div>
       </div>
     </div>

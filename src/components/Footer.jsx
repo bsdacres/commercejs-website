@@ -7,7 +7,7 @@ export default function Footer(){
   
   return(
     <footer class="footer">
-      <div>
+      <div class="footer-links">
         <A href="">Social Media</A>
         <A href="">Terms & Conditions</A>
         <A href="">Careers</A>

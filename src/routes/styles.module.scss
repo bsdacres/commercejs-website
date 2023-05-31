@@ -1,40 +1,212 @@
-.enter{
-  position: fixed;
-  height: 110vh;
-  width: 100vw;
-  background-size: cover;
-  background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a1cf9141-6957-4cd1-a760-ea9f98529897/d2gtaan-3aba6f83-de8b-46ff-a7f7-76925247c342.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2ExY2Y5MTQxLTY5NTctNGNkMS1hNzYwLWVhOWY5ODUyOTg5N1wvZDJndGFhbi0zYWJhNmY4My1kZThiLTQ2ZmYtYTdmNy03NjkyNTI0N2MzNDIucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.V3_Zi4qzk0bysHQN31IJncGX78DkWWJKvMco2aJxmPQ);
-}
-
-
 
 .landing{
-  margin: auto 0;
+  margin:  0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-size: cover;
+  overflow-x: hidden;
+  transition: 3s ease-in-out;
+  text-align: center;
+  height: fit-content;
+  width: 100vw;
+
 
   .img{
-    height: 65vh;
-    width: 73.5vw;
+    height: 100vh;
+    width: 100%;
     border-radius: 20px;
-    background-size: 100%;
-    background-position: bottom 0;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.986)), url(https://cdn.discordapp.com/attachments/274582330469777409/1088213587597738135/IMG_2718.png);
+    align-items: end;
+    justify-content: center;
+    position: relative;
+    background-size: cover;
+  
+
+    .gradient{
+      position: absolute;
+      background: linear-gradient(to bottom, rgba(7, 5, 5, 0.568) , #1f2028 100%);
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      color: white;
+      align-items: center;
+      justify-content: center;
+      letter-spacing: 10px;
+      
+      h1{
+        color: white;
+      }
+
+
+    }
     
+ 
+    video{
+      height: 100%;
+      width: 100%;
+      border-radius: 20px;
+      object-fit: cover;
+    }
+    .calltoaction{
+      text-align: center;
+      margin-bottom: 5%;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      border: 4px solid rgb(20, 11, 11);
+      padding: 25px;
+      border-radius: 20px;
+      color: rgb(252, 241, 241);
+
+    }
   }
 
-  .collect{
-    display: flex;
-    flex-direction: row;
-    width: 100vw;
-    height: fit-content;
-    gap: 1.5vw;
-    margin: 10px 0;
+  .collect{ 
+    overflow-x: hidden;
     align-items: center;
-    justify-content: center;
+    justify-content: justify;  
+    width: 70%;
     
+    
+  
+  
+    div{
+    display: flex;
+    height: 60vh;
+    width: 100%;
+    align-content: center;
+    justify-content: center;
+    margin: 0 auto;
+    gap: 1vh;
+    
+  }  
   }
 }
 
+
+
+
+
+.window{
+  height: 70vh;
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1vh;
+  font-size: xx-large;
+  color: white;
+}
+
+.left_window{
+  position: relative;
+  width:90%;
+  height:100%;
+  background-position: center;
+  background-size: cover;
+  transition: 1s ease-in-out 1s;
+  margin-right: .5vw;
+  border-radius: 20px;
+  background-image: url(https://graziamagazine.com/us/wp-content/uploads/sites/15/2021/06/final_60c8d9ed45426c00c4467865_76280.gif?resize=1024%2C576g);
+
+  P{
+    position: absolute;
+    width: 100%;
+    bottom: 3vh;
+    text-align: center;
+  }
+
+
+}
+
+.right_window:hover{
+  width: 120%;
+}
+
+.right_window{
+  width: 50%;
+  height: 100%;
+  border-radius: 20px;
+  background-image: url(https://cdn.discordapp.com/attachments/883034757376639036/1053891934982258718/222D01FC-EDD4-4C54-A16D-0B63ED590990.jpg);
+  background-size: cover;
+  transition: 1s ease-in-out 1s;
+  background-position: center;
+  position: relative;
+
+  P{
+    position: absolute;
+    width: 100%;
+    bottom: 3vh;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .collect{ 
+    overflow-x: hidden;
+    align-items: center;
+    justify-content: justify;  
+    width: 100%;
+    flex-direction: wrap;
+    
+    div{
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      height: fit-content;
+      width:50%;
+      background-color: rgb(7, 172, 172);
+    }
+    
+  }
+
+  .window{
+    flex-direction: column;
+    width: 100%;
+    height: 180vh;
+    margin: 5vh;
+
+    .left_window{
+      width: 95%;
+      height: 80%;
+      margin: 1vh auto;
+    }
+
+    .right_window{
+      height: 80;
+      width: 95%;
+      margin: 0 auto;
+    }
+  }
+
+  .gradient{
+    position: absolute;
+    background: linear-gradient(to bottom, rgba(7, 5, 5, 0.568) , #1f2028 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 10px;
+    line-height: 0;
+
+    .grad_container{
+      width: 80%;
+
+
+      h1{
+        color: white;
+        text-align: center;
+        font-size: 1em;
+        letter-spacing: 2px;
+        height: fit-content;  
+        padding: 0;
+    
+      }
+
+      p{
+        letter-spacing: 0;
+      }
+    }
+  }
+}

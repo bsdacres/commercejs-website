@@ -4,21 +4,25 @@
   align-items: center;
   justify-content: center;
   height: 5vh;
-  width: 99vw;
-  margin: 0 auto;
+  align-self: center;
+  justify-self: center;
+  width: 100vw;
   position: fixed;
-  top: .05px;
+  top: .1vh;
+  z-index: 5;
+  background-color: transparent;
   backdrop-filter: blur(10px);
+  border-radius: 20px;
+  font-size: medium;
   
 
   
   .menu{
-    color: rgb(10, 10, 10);
-    background-color: rgba(252, 252, 252, 0.5);
-    height: 85%;
-    width: 100%;
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    height: 100%;
+    width: 71%;
     text-align: center;
-    border-radius: 20px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -26,10 +30,15 @@
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: bolder;
+    position: relative;
+    transition: .2s ease-in-out;
+    
+
 
     a{
       text-decoration: none;
-      color: rgb(10, 9, 9);
+   
+      color: rgb(255, 255, 255);
       margin: 10px;
       padding: 15px;   
     }
@@ -37,13 +46,15 @@
     a:hover{
       background-color:  rgb(200, 206, 204);;
       border-radius: 10px;
+      -webkit-text-stroke: 2px white solid;
+      
     }
     
     .left {
         text-align: left;
         width: 33%;
         position: absolute;
-        left: 5px;
+        left: 0px;
     }
 
     .logo{
@@ -60,22 +71,56 @@
   }
 }
 
+
+.close{
+  position: absolute;
+  left: 2vw;
+  color: antiquewhite;
+  z-index: 300;
+  top:10vh
+}
+
 .collections{
   background-size:cover;
   display: flex;
   flex-wrap: wrap;
-  height: 45vh;
-  width: 32vh;
-  border-radius: 20px;
-  border: 5px solid rgba(255, 255, 255, 0.63);
   text-align: center;
-  transition: 0.4s ease-in-out;
-}
+  align-items: end;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  border-radius: 19px;
+  background-position: center;
+  background-size: 250%;
 
-.collections:hover{
-  transform: translateY(-20px);
+    h1{
+      position: absolute;
+      bottom: 0;
+      justify-content: center;
+      align-content: center;
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      backdrop-filter: blur(3px);
+      padding: 16px 0;
+      margin-bottom: 4%;
+      font-size: x-large;
+      color: rgb(255, 255, 255);
+      letter-spacing: 1px;
+
+      a{
+        margin: 2% auto;
+        background-color: rgba(255, 255, 255, 0.678);
+        padding: 3%;
+        width: fit-content;
+        border-radius: 20px;
+        font-size: small;
+        color: rgb(0, 0, 0);
+      }
+    }
   
 }
+
 
 
 .modal {
@@ -91,15 +136,16 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
   
   a{
     display: flex;
     flex-direction: column;
-    font-size: 8em;
-    letter-spacing: 10px;
+    font-size: 6em;
+    letter-spacing: 2px;
     gap: 10px;
     align-self: center;
-    text-transform: uppercase;
+    text-transform: capitalize;
     color: azure;
     text-align: center;
     margin: 10px;
@@ -115,12 +161,280 @@
   }
 }
 
+.checkout{
+  
+  display: flex;
+  flex-direction: column;
+  width: 20vw;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background-color: rgb(44, 43, 42);
+  padding: 2.5vw;
+  border-radius:  0  0 0px 20PX;
+  z-index: 50;
+  
+
+  .subtotal{
+    color: white;
+    display: flex;
+    flex-direction: row;
+
+  }
+
+  .name{
+    margin-right: 32%;
+  }
+
+  .amount{
+    margin-left: 32%;
+  }
+
+  a{
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 5%;
+    width: 90%;
+    border-radius: 20px;
+    font-size: large;
+    margin: auto 0;
+    color: black;
+
+    :hover{
+      background-color: aquamarine;
+    }
+  }
+}
+
+.cart{
+  position: fixed;
+  backdrop-filter: blur(20px);
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  right:0;
+  z-index: 50;
+  background-color: rgba(22, 16, 16, 0.308);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  letter-spacing: 1px;
+  display: flex;
+  flex-direction: column;
+  
+  
+  .lineContainer{
+    background-color: rgba(7, 5, 2, 0.425);
+    width: 25VW;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 79vh;
+    border-radius: 20px 0PX 0 0;
+
+ 
+    
+    
+    .lineitem{
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.075), rgba(0, 0, 0, 0));
+      color: rgb(253, 253, 253);
+      text-transform: capitalize;
+      text-align: left;
+      width: 25vw;
+      height: fit-content;
+      line-height: 0;
+      margin-bottom: 5VH;
+      border-radius: 20px;
+      align-items: center;
+
+      p{
+        margin-top: 0;
+        line-height: 50%;
+      }
+       
+      div{
+
+        height: fit-content;
+        margin-top: 0;
+        line-height: 0;
+      }
+
+      button{
+        background-color: transparent;
+        background-repeat: no-repeat;
+        color: rgb(255, 255, 255);
+        text-decoration: underline;
+        border: none;
+        cursor: pointer;
+        overflow: hidden;
+        outline: none;
+        width: fit-content;
+        text-align: left;
+        padding: 0%;
+        font-size: medium;
+        margin-top: 30%;
+      }
+
+
+      
+      .img{
+        position: relative;
+        height: 20vh;
+        width: 8vw;
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        margin: 2%;
+     }
+    } 
+   }
+  }
+
 @media only screen and (max-width: 600px) {
+  .nav{
+    margin-left: 0;
+    width: 100vw;
+
+    .menu{
+      width: 100%;
+    }
+  }
+  
+  .collections{
+    width: 100%;
+    height: 70vh;
+  }
+  
   .modal{
     a{
       font-size: 2em;
     }
   }
+  .checkout{
+  
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    position: fixed;
+    bottom: 1vh;
+    right: 0;
+    background-color: rgba(250, 235, 215, 0.233);
+    padding: 2.5vw;
+    border-radius: 20px;
+    
+  
+    .subtotal{
+      color: white;
+      display: flex;
+      flex-direction: row;
+  
+    }
+  
+    .name{
+      margin-right: 32%;
+    }
+  
+    .amount{
+      margin-left: 32%;
+    }
+  
+    a{
+      background-color: rgb(255, 255, 255);
+      text-align: center;
+      padding: 5%;
+      width: 90%;
+      border-radius: 20px;
+      font-size: large;
+      margin: auto 0;
+  
+      :hover{
+        background-color: aquamarine;
+      }
+    }
+  }
+  .cart{
+    position: fixed;
+    backdrop-filter: blur(20px);
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    right:0;
+    z-index: 50;
+    background-color: rgba(22, 16, 16, 0.308);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 1px;
+    display: flex;
+    flex-direction: column;
+    
+    
+    .lineContainer{
+      background-color: rgba(7, 5, 2, 0.425);
+      width: 100vw;
+      position: absolute;
+      right: 0;
+      height: 100vh;
+      border-radius: 20px;
+  
+   
+      
+      
+      .lineitem{
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        background-color: rgba(0, 0, 0, 0.658);
+        color: rgb(253, 253, 253);
+        text-transform: capitalize;
+        text-align: left;
+        width: 100%;
+        height: fit-content;
+        line-height: 0;
+        border-radius: 20px;
+        align-items: center;
+        margin: 2%;
+        margin-right: 6%;
+  
+        p{
+          margin-top: 0;
+          line-height: 25%;
+        }
+         
+        div{
+  
+          height: fit-content;
+          margin-top: 0;
+          line-height: 0;
+        }
+  
+        button{
+          background-color: transparent;
+          background-repeat: no-repeat;
+          color: rgb(255, 255, 255);
+          text-decoration: underline;
+          border: none;
+          cursor: pointer;
+          overflow: hidden;
+          outline: none;
+          width: fit-content;
+          text-align: left;
+          padding: 0%;
+          font-size: medium;
+          margin-top: 0;
+        }
+  
+  
+        
+        .img{
+          position: relative;
+          height: 20vh;
+          width: 30vw;
+          backdrop-filter: blur(10px);
+          border-radius: 20px;
+          margin: 2%;
+       }
+      } 
+     }
+    }
 }
 
 

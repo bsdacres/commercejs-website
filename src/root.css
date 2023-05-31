@@ -4,18 +4,18 @@
 
 body {
   font-family: 'EB Garamond';
-    background-color:  #FAF9F6;
+    background-color:  #1f2028;
     background-size: 400%;
     color: #1f1f1e;
     overflow-x: hidden;
-    animation: gradient 15s linear infinite;
-    margin: 0;
+    margin: 0 auto;
     
 
 }
 
 body::-webkit-scrollbar {
   width: .5em;
+
 }
  
 body::-webkit-scrollbar-track {
@@ -27,6 +27,13 @@ body::-webkit-scrollbar-thumb {
   outline: 1px solid slategrey;
 }
 
+button{
+  font-family: 'EB Garamond';
+  transition: .5s ease-in-out;
+}
+button:active{
+  background-color: rgb(157, 154, 154);
+}
 
 
 main {
