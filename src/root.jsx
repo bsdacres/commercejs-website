@@ -3,6 +3,7 @@ import { Suspense } from "solid-js";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { CartProvider } from "./context/CartContext";
+import { useCartContext } from "~/context/CartContext"
 import {
   A,
   Body,

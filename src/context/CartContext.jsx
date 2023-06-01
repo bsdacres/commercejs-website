@@ -9,7 +9,7 @@ export const CartContext = createContext();
 
 export const CartProvider = (props) => {
   const [cart, setCart] = createSignal();
-  const [cartState, setCartSet] = createSignal(false)
+  const [viewCart, SetViewCart] = createSignal()
  
 
   createEffect(() => {
@@ -23,7 +23,7 @@ export const CartProvider = (props) => {
   });
 
   return (
-    <CartContext.Provider value={{ cart, setCart, cartState, setCartSet }}>
+    <CartContext.Provider value={{ cart, setCart, viewCart, SetViewCart }}>
       {props.children}
     </CartContext.Provider>
   );

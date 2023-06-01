@@ -79,7 +79,8 @@
   width: 100%;
   border-radius: 19px;
   background-position: center;
-  background-size: 250%;
+  background-size: 200%;
+  transition: 1s ease-in-out;
 }
 .collections h1 {
   position: absolute;
@@ -107,6 +108,9 @@
   font-size: small;
   color: rgb(0, 0, 0);
 }
+.collections .collections:hover {
+  background-position: -50%;
+}
 
 .fallback {
   width: 100%;
@@ -116,8 +120,7 @@
 }
 
 .exit {
-  color: white;
-  position: absolute;
+  color: absolute;
   top: 0.5vh;
   right: 1vw;
   font-size: small;
@@ -282,7 +285,7 @@
 @media only screen and (max-width: 600px) {
   .exit {
     color: white;
-    position: absolute;
+    position: fixed;
     top: 0.2vh;
     right: 3px;
     font-size: small;

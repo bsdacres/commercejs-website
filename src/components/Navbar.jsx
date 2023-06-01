@@ -9,9 +9,8 @@ import { useCartContext } from "~/context/CartContext"
 
 
 export default function Navbar(){
-  const { cart, setCart, cartState, setCartState } = useCartContext()
+  const { cart, setCart, viewCart, SetViewCart } = useCartContext()
   const [modal, setModal] = createSignal(false)
-  const [viewCart, SetViewCart] = createSignal()
   const toggleCart = () => setCartState(!cartState);
   const toggle = () => setModal(!modal())
 
