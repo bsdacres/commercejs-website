@@ -16,7 +16,7 @@ export default function Product(props) {
         <img class ={product.img} src={props.image.url} alt='clothing' />
         <div  class={product.productdata}> 
           <p  class="product-title">{props.name}</p>
-          <p>{props.price.formatted_with_symbol}</p>
+          <p>${props.price.raw}</p>
         </div>
       </Motion.div>
     </div>  

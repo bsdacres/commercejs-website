@@ -37,6 +37,9 @@
 .landing .img .gradient h1 {
   color: white;
 }
+.landing .img .gradient p {
+  letter-spacing: 2px;
+}
 .landing .img video {
   height: 100%;
   width: 100%;
@@ -87,18 +90,35 @@
   background-position: center;
   background-size: cover;
   transition: 1s ease-in-out 1s;
+  display: flex;
+  flex-direction: column;
   margin-right: 0.5vw;
   border-radius: 20px;
   animation: moving 30s ease-in-out infinite;
   background-image: url(https://cdn.discordapp.com/attachments/883034757376639036/1113702009267302520/IMG_3396.png);
+  text-align: left;
 }
-.left_window P {
-  position: absolute;
+.left_window div {
+  top: 10%;
+  left: 3%;
+  line-height: 3px;
+  height: 0%;
   width: 100%;
-  bottom: 3vh;
-  text-align: center;
-  -webkit-backdrop-filter: blur(20px);
-          backdrop-filter: blur(20px);
+  color: rgb(255, 255, 255);
+  position: absolute;
+}
+.left_window div h1 {
+  line-height: 0;
+  color: rgb(255, 255, 255);
+  margin: 0;
+}
+.left_window div a {
+  color: rgb(0, 0, 0);
+  border-radius: 20px;
+  background-color: whitesmoke;
+  padding: 1%;
+  margin-top: 3vh;
+  text-transform: uppercase;
 }
 
 .right_window:hover {
@@ -109,17 +129,41 @@
   width: 50%;
   height: 100%;
   border-radius: 20px;
-  background-image: url(https://cdn.discordapp.com/attachments/883034757376639036/1113703584056475738/FOR-INSTAGRAM-3_1.jpg);
+  background-image: url(https://cdn.discordapp.com/attachments/883034757376639036/1114067169412661278/7E455652-7A99-4252-BB4A-7C4A963CFAB8.jpg);
   background-size: cover;
   transition: 1s ease-in-out 1s;
   background-position: center;
   position: relative;
+  text-align: left;
 }
-.right_window P {
+.right_window div {
   position: absolute;
+  line-height: 3px;
+  height: 100%;
   width: 100%;
-  bottom: 3vh;
-  text-align: center;
+  color: rgb(255, 255, 255);
+  top: 70%;
+  left: 3%;
+}
+.right_window div h1 {
+  line-height: 0;
+  color: rgb(255, 255, 255);
+  margin: 0;
+}
+.right_window div a {
+  color: rgb(0, 0, 0);
+  border-radius: 20px;
+  background-color: rgb(255, 255, 255);
+  padding: 1%;
+  margin-top: 3vh;
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  text-transform: uppercase;
+}
+
+.windowtext {
+  color: rgb(233, 42, 42);
+  margin: 80% auto;
 }
 
 @media only screen and (max-width: 600px) {
@@ -129,6 +173,7 @@
     justify-content: justify;
     width: 100%;
     flex-direction: wrap;
+    display: none;
   }
   .collect div {
     position: relative;
@@ -150,10 +195,41 @@
     height: 80%;
     margin: 1vh auto;
   }
+  .window .left_window div {
+    margin-left: 2px;
+  }
+  .window .left_window div h1 {
+    font-size: medium;
+  }
+  .window .left_window div p {
+    margin: 0;
+    margin-bottom: 30px;
+    margin-top: 20px;
+  }
+  .window .left_window div a {
+    font-size: large;
+    padding: 3%;
+  }
   .window .right_window {
     height: 80;
     width: 95%;
     margin: 0 auto;
+    background-size: cover;
+  }
+  .window .right_window div {
+    margin-left: 2px;
+  }
+  .window .right_window div h1 {
+    font-size: medium;
+  }
+  .window .right_window div p {
+    margin: 0;
+    margin-bottom: 30px;
+    margin-top: 20px;
+  }
+  .window .right_window div a {
+    font-size: large;
+    padding: 3%;
   }
   .gradient {
     position: absolute;

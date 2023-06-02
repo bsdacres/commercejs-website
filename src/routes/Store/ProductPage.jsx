@@ -31,7 +31,7 @@ export default function ProductPage(props){
           transition={{ duration: 2 , easing: "ease-in-out" }}
           class={styles.productData}>
           <h1 class={styles.prodtitle}>{props.name}</h1>
-          <p>{props.price}</p>
+          <p>${props.price}</p>
           <div>
             <p>
               Visit Hastiludes.com to view full product lore

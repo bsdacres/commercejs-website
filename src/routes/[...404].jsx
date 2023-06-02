@@ -7,10 +7,6 @@ export default function NotFound() {
       <HttpStatusCode code={404} />
       <h1>Page Not Found</h1>
       <p>
-        Visit{" "}
-        <a href="https://start.solidjs.com" target="_blank">
-          start.solidjs.com
-        </a>{" "}
         The page you're looking for doesn't exist.
       </p>
     </main>

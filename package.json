@@ -13,7 +13,6 @@
     "vite": "^4.1.4"
   },
   "dependencies": {
-    "@babylonjs/core": "^6.3.1",
     "@chec/commerce.js": "^2.8.0",
     "@motionone/solid": "^10.16.0",
     "@solidjs/meta": "^0.28.2",
@@ -23,6 +22,7 @@
     "solid-start": "^0.2.24",
     "solid-start-netlify": "^0.2.26",
     "solid-start-vercel": "^0.2.26",
+    "solid-three": "^0.2.0",
     "string-strip-html": "^13.2.3",
     "undici": "^5.15.1"
   },

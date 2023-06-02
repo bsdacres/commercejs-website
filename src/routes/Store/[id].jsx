@@ -38,7 +38,7 @@ export default function Products() {
         <ProductPage 
         name = {listing() && listing().name}
         image = {listing() && listing().image.url}
-        price = {listing() && listing().price.formatted_with_symbol}
+        price = {listing() && listing().price.raw}
         description = {listing() && listing().description.replaceAll(regex, "")}
         variants = {variants() && variants()}
         id = {listing() && listing().id}

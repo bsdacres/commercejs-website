@@ -23,12 +23,6 @@ return {
 };}
 )
 
-const style = 
-{
-  height: "65vh",
-  width: "70vw",
-  "border-radius": "20px",
-}
 export default function ({ merchant, categories, products }) {
   return (
 
@@ -45,19 +39,27 @@ export default function ({ merchant, categories, products }) {
 >
             <h1>Canto III</h1>
             <h1> A Woodland Tradegy</h1>
-            <p>Discover the Fable</p>
+            <p>Narrated by Brian Selburn Dacres</p>
           </Motion.div>
         </Motion.div>
-       <video src="https://media.discordapp.net/attachments/883034757376639036/1113009187669151874/Gucci_Cruise_2024_Fashion_Show.mp4" type="video/mp4" autoplay loop muted />
+       <video src="https://media.discordapp.net/attachments/883034757376639036/1114059295856791614/FFT.mp4" type="video/mp4" autoplay loop muted />
       </div>
       <hr></hr>
       <div class={styles.window}> 
-        <div class={styles.left_window} >
-          <p>Amanecer Tunic</p>
-          <p>$198</p>
+        <div class={styles.left_window} href="/store">
+            <div style={styles.wintex}>
+              <h1>Amanecer Tunic</h1>
+              <p>Dawning, an ode to Aether</p>
+              <A href="/store"> Shop Now</A>
+            </div>
+            
         </div>
-        <div class={styles.right_window}>
-          <p>Discover More</p> 
+        <div href='/store' class={styles.right_window}>
+          <div style={styles.wintex}>
+            <h1>Serapis Hood</h1>
+            <p>Relic of the Abyssal Hymns</p>
+            <a href="/store"> Shop Now</a>
+          </div>
         </div>
       </div>
       <div class={styles.collect}>
@@ -81,7 +83,9 @@ export default function ({ merchant, categories, products }) {
         />
         </div>
       </div>
-      
+      <div>
+
+      </div>
     </Motion.div>
     </> 
   );
