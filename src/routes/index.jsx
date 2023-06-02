@@ -36,15 +36,13 @@ export default function ({ merchant, categories, products }) {
     
     <Motion.div
     class={styles.landing}
-    animate={{ width: [0, 100] } }
-    transition={{ duration: 3, easing: "ease-in-out" }}
+
     >
       <div draggable class={styles.img}  alt='landing-image'>
         <Motion.div 
         class={styles.gradient}>
           <Motion.div class={styles.grad_container}
-                animate={{ opacity: [0, 100] } }
-                transition={{ duration: 3, easing: "ease-in-out", delay: 3}}>
+>
             <h1>Canto III</h1>
             <h1> A Woodland Tradegy</h1>
             <p>Discover the Fable</p>

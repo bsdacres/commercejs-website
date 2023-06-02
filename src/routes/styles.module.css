@@ -180,15 +180,4 @@
   .gradient .grad_container p {
     letter-spacing: 0;
   }
-}
-@keyframes moving {
-  0% {
-    background-position: 0% 0%;
-  }
-  50% {
-    background-position: 100% 0%;
-  }
-  100% {
-    background-position: 0% 0%;
-  }
 }/*# sourceMappingURL=styles.module.css.map */
