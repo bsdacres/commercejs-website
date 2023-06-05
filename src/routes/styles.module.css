@@ -189,6 +189,7 @@
     width: 100%;
     height: 180vh;
     margin: 5vh;
+    overflow: hidden;
   }
   .window .left_window {
     width: 95%;

@@ -39,7 +39,7 @@ export default function Navbar(){
       </div>
       <A href="/">covenaunt</A>
       <div class={styles.right}>
-        <a onclick={() => SetViewCart(true)}>Cart</a>
+        <a onclick={() => SetViewCart(true)}>Cart {cart.total_items}</a>
       </div>
     </div>
    </nav> 
