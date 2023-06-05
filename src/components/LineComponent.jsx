@@ -2,11 +2,14 @@ import styles from "./styles.module.css"
 import { Motion } from "@motionone/solid"
 import commerce from "~/lib/commerce"
 import { useCartContext } from "~/context/CartContext"
+import { createStore } from "solid-js/store"
 
 export default function LineComponent(props){
-  const { cart, setCart } = useCartContext()
+  const { cart, setCart, setCartItems, cartItems } = useCartContext()
+
   function removeItem(item){
     commerce.cart.remove(item).then((response) => setCart(response));
+    setCartItems(cart.total_items)
   }
 
   

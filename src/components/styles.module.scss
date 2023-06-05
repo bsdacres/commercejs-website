@@ -72,7 +72,7 @@
 }
 
 
-.close{
+.exit{
   position: absolute;
   left: 2vw;
   color: antiquewhite;
@@ -339,6 +339,14 @@
 
     .menu{
       width: 100%;
+      
+      .right{
+        width: 35%;
+      }
+
+      .left{
+        text-align: right;
+      }
     }
   }
   

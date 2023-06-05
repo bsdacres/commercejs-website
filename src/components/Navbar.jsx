@@ -1,18 +1,21 @@
 import { A } from "@solidjs/router"
 import  styles from './styles.module.css'
-import { createEffect, createSignal } from "solid-js"
+import { createEffect, createSignal} from "solid-js"
 import { Show } from "solid-js"
 import { Motion } from "@motionone/solid"
 import commerce from "~/lib/commerce"
 import Cart from "./Cart"
 import { useCartContext } from "~/context/CartContext"
+import { createStore } from "solid-js/store"
 
 
 export default function Navbar(){
-  const { cart, setCart, viewCart, SetViewCart } = useCartContext()
+  const { cart, setCart, viewCart, SetViewCart, cartItems, setCartItems } = useCartContext()
   const [modal, setModal] = createSignal(false)
   const toggleCart = () => setCartState(!cartState);
   const toggle = () => setModal(!modal())
+
+
 
   return(
   <>
@@ -39,7 +42,7 @@ export default function Navbar(){
       </div>
       <A href="/">covenaunt</A>
       <div class={styles.right}>
-        <a onclick={() => SetViewCart(true)}>Cart {cart.total_items}</a>
+        <a onclick={() => SetViewCart(true)}>Cart ({cartItems()})</a>
       </div>
     </div>
    </nav> 

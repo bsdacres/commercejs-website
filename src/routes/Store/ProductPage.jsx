@@ -10,13 +10,14 @@ import { createStore } from "solid-js/store"
 export default function ProductPage(props){
   const [quantity, setQuantity] = createSignal(1)
   const [selected, setSelected] = createStore(null)
-  const { cart, setCart } = useCartContext()
+  const { cart, setCart, setCartItems, cartItems } = useCartContext()
   
   function addtoCart(id, amount, variant ){
     commerce.cart.add(id, amount, variant).then(response => setCart(response)).catch(
       console.log('there was an error')
     )
-    console.log(cart)
+    console.log(cart);
+    setCartItems(cart().total_items)
   }
 
   return(
