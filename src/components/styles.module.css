@@ -60,7 +60,7 @@
   text-align: right;
 }
 
-.close {
+.exit {
   position: absolute;
   left: 2vw;
   color: antiquewhite;
@@ -306,6 +306,12 @@
   }
   .nav .menu {
     width: 100%;
+  }
+  .nav .menu .right {
+    width: 35%;
+  }
+  .nav .menu .left {
+    text-align: right;
   }
   .collections {
     width: 100%;

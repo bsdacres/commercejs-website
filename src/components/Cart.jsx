@@ -1,4 +1,4 @@
-import { For, createEffect, createSignal } from "solid-js"
+import { For, createEffect, createSignal, onMount } from "solid-js"
 import LineComponent from "./LineComponent"
 import { useCartContext } from "~/context/CartContext"
 import styles from "./styles.module.css"
@@ -12,7 +12,7 @@ export default function Cart(){
   const [total, setTotal] = createStore()
   const { cart } = useCartContext()
 
-  createEffect(()=>{
+  onMount(()=>{
     setLineItems(cart())
     console.log(lineItems)
 
