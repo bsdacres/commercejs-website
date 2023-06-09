@@ -60,7 +60,7 @@
   text-align: right;
 }
 
-.exit {
+.close {
   position: absolute;
   left: 2vw;
   color: antiquewhite;
@@ -77,10 +77,9 @@
   justify-content: center;
   position: relative;
   width: 100%;
-  border-radius: 19px;
+  border-radius: 20px;
   background-position: center;
-  background-size: 200%;
-  transition: 1s ease-in-out;
+  background-size: 250%;
 }
 .collections h1 {
   position: absolute;
@@ -107,31 +106,6 @@
   border-radius: 20px;
   font-size: small;
   color: rgb(0, 0, 0);
-}
-.collections .collections:hover {
-  background-position: -50%;
-}
-
-.fallback {
-  width: 100%;
-  text-align: center;
-  margin-top: 70%;
-  color: white;
-}
-
-.exit {
-  color: absolute;
-  top: 0.5vh;
-  right: 1vw;
-  font-size: small;
-  z-index: 1000;
-  background-color: rgba(255, 255, 255, 0.493);
-  text-align: center;
-  border-radius: 50%;
-  width: 2vh;
-  height: 2vh;
-  padding: 0.5%;
-  font-size: 2em;
 }
 
 .modal {
@@ -217,6 +191,7 @@
   right: 0;
   z-index: 50;
   background-color: rgba(22, 16, 16, 0.308);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   letter-spacing: 1px;
   display: flex;
   flex-direction: column;
@@ -283,35 +258,12 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .exit {
-    color: white;
-    position: fixed;
-    top: 0.2vh;
-    right: 3px;
-    font-size: small;
-    z-index: 1000;
-    background-color: rgba(116, 114, 114, 0.308);
-    -webkit-backdrop-filter: blur(20px);
-            backdrop-filter: blur(20px);
-    text-align: right;
-    border-radius: 100%;
-    width: -moz-fit-content;
-    width: fit-content;
-    padding: 3%;
-    font-size: larger;
-  }
   .nav {
     margin-left: 0;
     width: 100vw;
   }
   .nav .menu {
     width: 100%;
-  }
-  .nav .menu .right {
-    width: 35%;
-  }
-  .nav .menu .left {
-    text-align: right;
   }
   .collections {
     width: 100%;
@@ -325,10 +277,11 @@
     flex-direction: column;
     width: 100vw;
     position: fixed;
-    bottom: 0vh;
+    bottom: 1vh;
     right: 0;
     background-color: rgba(250, 235, 215, 0.233);
-    padding: 0;
+    padding: 2.5vw;
+    border-radius: 20px;
   }
   .checkout .subtotal {
     color: white;
@@ -336,7 +289,7 @@
     flex-direction: row;
   }
   .checkout .name {
-    margin-right: 20%;
+    margin-right: 32%;
   }
   .checkout .amount {
     margin-left: 32%;
@@ -345,11 +298,10 @@
     background-color: rgb(255, 255, 255);
     text-align: center;
     padding: 5%;
-    width: 85%;
+    width: 90%;
     border-radius: 20px;
     font-size: large;
-    margin: 0 auto;
-    margin-bottom: 1VH;
+    margin: auto 0;
   }
   .checkout a :hover {
     background-color: aquamarine;
@@ -358,12 +310,13 @@
     position: fixed;
     -webkit-backdrop-filter: blur(20px);
             backdrop-filter: blur(20px);
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     top: 0;
     right: 0;
     z-index: 50;
     background-color: rgba(22, 16, 16, 0.308);
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     letter-spacing: 1px;
     display: flex;
     flex-direction: column;
@@ -380,7 +333,7 @@
     position: relative;
     display: flex;
     flex-direction: row;
-    letter-spacing: 1px;
+    background-color: rgba(0, 0, 0, 0.658);
     color: rgb(253, 253, 253);
     text-transform: capitalize;
     text-align: left;
@@ -390,10 +343,8 @@
     line-height: 0;
     border-radius: 20px;
     align-items: center;
-    margin: 0;
-    margin-right: 0;
-    padding: 0;
-    margin-top: 1vh;
+    margin: 2%;
+    margin-right: 6%;
   }
   .cart .lineContainer .lineitem p {
     margin-top: 0;

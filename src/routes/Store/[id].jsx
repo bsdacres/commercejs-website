@@ -15,6 +15,7 @@ export default function Products() {
   const [desc, setDesc] = createSignal(undefined)
   const [variants, setVariants] = createSignal(undefined)
   const [group, setGroup] = createSignal(undefined)
+  const [] = createSignal(0)
   const page = useParams();
   var regex = /(<([^>]+)>)/ig;
   
@@ -37,7 +38,7 @@ export default function Products() {
       <Title>Covenaunt | {listing() &&  listing().name}</Title>
         <ProductPage 
         name = {listing() && listing().name}
-        image = {listing() && listing().image.url}
+        image = {listing() && listing().assets[0].url}
         price = {listing() && listing().price.raw}
         description = {listing() && listing().description.replaceAll(regex, "")}
         variants = {variants() && variants()}

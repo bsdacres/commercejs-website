@@ -9,21 +9,14 @@ import { Motion } from "@motionone/solid";
 import ProductPage from "./Store/ProductPage";
 import Product from "~/components/Product";
 
-onMount(async ()=>{
-const merchant = await commerce.merchants.about();
-const { data: categories } = await commerce.categories.list();
-const { data: products } = await commerce.products.list();
 
-return {
-  props: {
-    merchant,
-    categories,
-    products,
-  },
-};}
-)
 
 export default function ({ merchant, categories, products }) {
+  const { cart, setCart, viewCart, SetViewCart, cartItems, setCartItems } = useCartContext() 
+  onMount(async ()=>{
+    commerce.cart.retrieve().then((cart) => setCart(cart));
+  }
+  )
   return (
 
   <>
