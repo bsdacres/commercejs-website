@@ -25,9 +25,6 @@ export default function Products() {
       setVariants(res.variant_groups[0].options)
       setGroup(res.variant_groups[0].id)
       console.log(res)
-      console.log(variants())
-      console.log(group())
-      console.log(variants().name)
     });
   })
   return(

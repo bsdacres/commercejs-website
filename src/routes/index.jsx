@@ -50,7 +50,7 @@ export default function ({ merchant, categories, products }) {
         </div>
         <div href='/store' class={styles.right_window}>
           <div style={styles.wintex}>
-            <h1>Serapis Hood</h1>
+            <h1>FFT X Cov</h1>
             <p>Relic of the Abyssal Hymns</p>
             <a href="/store"> Shop Now</a>
           </div>

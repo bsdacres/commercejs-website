@@ -1,5 +1,5 @@
 // @refresh reload
-import { Suspense } from "solid-js";
+import { Suspense, onMount } from "solid-js";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { CartProvider } from "./context/CartContext";
@@ -20,6 +20,7 @@ import "./root.css";
 export default function Root() {
   return (
     <Html lang="en">
+      
       <Head>
         <Title>Covenaunt - Fantasy sung through Fabric</Title>
         <Meta charset="utf-8" />
