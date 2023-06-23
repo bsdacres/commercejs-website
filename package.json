@@ -15,6 +15,7 @@
   "dependencies": {
     "@chec/commerce.js": "^2.8.0",
     "@motionone/solid": "^10.16.0",
+    "@solid-primitives/script-loader": "^2.0.2",
     "@solidjs/meta": "^0.28.2",
     "@solidjs/router": "^0.8.2",
     "motion": "^10.15.5",

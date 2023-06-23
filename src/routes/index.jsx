@@ -9,6 +9,8 @@ import { Motion } from "@motionone/solid";
 import ProductPage from "./Store/ProductPage";
 import Product from "~/components/Product";
 import { useCartContext } from "~/context/CartContext";
+import { createScriptLoader } from "@solid-primitives/script-loader";
+
 
 
 
@@ -16,6 +18,13 @@ export default function ({ merchant, categories, products }) {
   const { cart, setCart, viewCart, SetViewCart, cartItems, setCartItems } = useCartContext() 
   onMount(async ()=>{
     commerce.cart.retrieve().then((cart) => setCart(cart));
+    createScriptLoader(
+      'https://connect.facebook.net/en_US/fbevents.js',
+      () => {
+        window.fbq('init', '1391634164737596');
+        window.fbq('track', 'PageView');
+      }
+    );
   }
   )
   return (
