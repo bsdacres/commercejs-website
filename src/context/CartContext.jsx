@@ -10,7 +10,7 @@ export const CartContext = createContext();
 export const CartProvider = (props) => {
   const [cart, setCart] = createSignal();
   const [viewCart, SetViewCart] = createSignal()
-  const [ cartItems, setCartItems ] =  createSignal()
+  const [ cartItems, setCartItems ] =  createSignal(0)
  
 
   createEffect(() => {

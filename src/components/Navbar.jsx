@@ -1,6 +1,6 @@
 import { A } from "@solidjs/router"
 import  styles from './styles.module.css'
-import { createEffect, createSignal} from "solid-js"
+import { createEffect, createSignal, onMount} from "solid-js"
 import { Show } from "solid-js"
 import { Motion } from "@motionone/solid"
 import commerce from "~/lib/commerce"
@@ -14,7 +14,11 @@ export default function Navbar(){
   const [modal, setModal] = createSignal(false)
   const toggleCart = () => setCartState(!cartState);
   const toggle = () => setModal(!modal())
-
+  createEffect(() =>{
+    if(cart()){
+      setCartItems(cart().total_items)
+    }
+  })
 
 
   return(
@@ -27,7 +31,7 @@ export default function Navbar(){
       <A href="/store">Store</A>
       <A href="/">About</A>
       <A href="/store">Stockists</A>
-      <A target="_blank" href="https://hastiludes.com/">Universe</A>
+      <A target="_blank" href="https://hastiludes.com/">Archive</A>
       <A href="/contact">Contact</A>
     </Motion.div>
   </Show> 
