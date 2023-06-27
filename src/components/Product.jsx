@@ -8,7 +8,7 @@ import { Motion } from '@motionone/solid';
 export default function Product(props) {
   return (
  <>
-   <A class={product.anchor} href={props.id}>
+   <A class={product.anchor} href={props.permalink}>
     <div class={product.wrapper}>
       <Motion.div 
           hover={{ scale: 1.1 }}

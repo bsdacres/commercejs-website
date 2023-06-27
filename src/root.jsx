@@ -4,7 +4,6 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { CartProvider } from "./context/CartContext";
 import { useCartContext } from "~/context/CartContext"
-import { createScriptLoader } from "@solid-primitives/script-loader";
 import {
   A,
   Body,
@@ -18,6 +17,7 @@ import {
   Title,
 } from "solid-start";
 import "./root.css";
+
 
 
 export default function Root() {

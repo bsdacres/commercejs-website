@@ -20,7 +20,7 @@ export default function Products() {
   var regex = /(<([^>]+)>)/ig;
   
   createEffect(()=>{
-    commerce.products.retrieve(page.id).then((res) => {
+    commerce.products.retrieve(page.id, { type: 'permalink'} ).then((res) => {
       setListing(res);
       setVariants(res.variant_groups[0].options)
       setGroup(res.variant_groups[0].id)

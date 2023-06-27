@@ -158,6 +158,21 @@
     opacity: 1;
   }
 }
+option {
+  background-color: rgb(88, 86, 86);
+  border-radius: 10px;
+  padding: 0px 15px;
+  margin: 5px 10px;
+  margin-bottom: 3vh;
+}
+option :hover {
+  cursor: pointer;
+}
+
+option:hover {
+  cursor: pointer;
+}
+
 @media only screen and (max-width: 600px) {
   .store {
     margin: 0;
