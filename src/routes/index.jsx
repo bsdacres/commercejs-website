@@ -9,15 +9,6 @@ import { Motion } from "@motionone/solid";
 import ProductPage from "./Store/ProductPage";
 import Product from "~/components/Product";
 import { useCartContext } from "~/context/CartContext";
-import { createScriptLoader } from "@solid-primitives/script-loader";
-createScriptLoader({
-  url: 'https://connect.facebook.net/en_US/fbevents.js',
-  onLoad: () => {
-    window.fbq('init', '363654784697053');
-    window.fbq('track', 'PageView');
-  }
-});
-
 
 
 
