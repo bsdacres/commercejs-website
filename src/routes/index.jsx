@@ -33,7 +33,7 @@ export default function ({ merchant, categories, products }) {
           <Motion.div class={styles.grad_container}
 >
             <h1>Canto III</h1>
-            <h1> A Woodland Tradegy</h1>
+            <h1> A Woodland Tragedy</h1>
             <p>Narrated by Brian Selburn Dacres</p>
           </Motion.div>
         </Motion.div>

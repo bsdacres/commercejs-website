@@ -23,7 +23,7 @@ export default function LineComponent(props){
       <div style={styles.lines}>
         <p><b>{props.product_name}</b></p>
         <p>Quantity: {props.quantity}</p>
-        <p>size: </p>
+        <p>size: {props.selected_option} </p>
         <p>{props.price.formatted_with_code}</p>
         <button onClick={()=> removeItem(props.id)} >Remove</button>
       </div>
