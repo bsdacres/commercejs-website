@@ -24,11 +24,11 @@ export default function Store() {
   const [products, setProducts] = createSignal([])
 
 
-  createEffect(()=>{
-    commerce.products.list().then((res) => {
+  createEffect(async ()=>{
+    await commerce.products.list().then((res) => {
       setProducts(res.data); 
     });
-  })
+  },[products] )
 
   return (
  
