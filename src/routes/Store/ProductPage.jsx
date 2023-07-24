@@ -43,25 +43,23 @@ export default function ProductPage(props){
           transition={{ duration: 2 , easing: "ease-in-out" }}
           class={styles.productData}>
           <h1 class={styles.prodtitle}>{props.name}</h1>
-          <p>${props.price}</p>
-          <div>
-            <p>
-              Visit Hastiludes.com to view full product lore
-            </p>
-          </div>
-          <p>{props.description}</p>
+          <p class={styles.price}>${props.price}</p>
           <div class={styles.addtocart}>
             <select class={styles.variants} value={selected} onChange={e =>setSelected(e.target.value)}>
-              <option value="" selected hidden > Select Size</option>
+              <option value="" selected hidden >Size</option>
                 <For each={props.variants} fallback={<div></div>}>
                     {(variant) => <option value={variant.id} >{variant.name}</option>}
                 </For>
             </select>
             <button onclick={() => addtoCart(props.id, quantity,item)} class={styles.button}>
-              <p>Add to Shopping Bag</p>
-              
-
+              <p>Add to Bag</p>
             </button>
+          </div>
+          <div class={styles.text}>
+            <p>
+              Visit Hastiludes.com to view full product lore
+            </p>
+            <p>{props.description}</p>
           </div>
         </Motion.div>
       </div>
