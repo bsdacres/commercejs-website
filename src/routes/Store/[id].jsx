@@ -40,6 +40,7 @@ export default function Products() {
         description = {listing() && listing().description.replaceAll(regex, "")}
         variants = {variants() && variants()}
         id = {listing() && listing().id}
+        variant_groups = {group() && group()}
         />
       </Motion.div>
   )

@@ -9,14 +9,26 @@ import { createStore } from "solid-js/store"
 
 export default function ProductPage(props){
   const [quantity, setQuantity] = createSignal(1)
-  const [selected, setSelected] = createStore(null)
+  const [selected, setSelected] = createSignal(null)
+  const [selectItem, setSelectedItem] = createSignal(null)
   const { cart, setCart, setCartItems, cartItems } = useCartContext()
+
+  const item = {
+    [props.variant_groups] : ""
+  }
+  createEffect(()=>{
+    item[props.variant_groups] = selected();
+    delete item.false
+    console.log(item)
+  }, [selected()])
+
   
   function addtoCart(id, amount, variant ){
     commerce.cart.add(id, amount, variant).then(response => setCart(response)).catch(
       console.log('there was an error')
     )
     console.log(cart);
+    console.log(item)
     setCartItems(cart().total_items)
   }
 
@@ -39,19 +51,19 @@ export default function ProductPage(props){
             </p>
           </div>
           <p>{props.description}</p>
-          <div>
-            <p>
-              Ready-to-Wear
-            </p>
+          <div class={styles.addtocart}>
+            <select class={styles.variants} value={selected} onChange={e =>setSelected(e.target.value)}>
+              <option value="" selected hidden >Size</option>
+                <For each={props.variants} fallback={<div></div>}>
+                    {(variant) => <option value={variant.id} >{variant.name}</option>}
+                </For>
+            </select>
+            <button onclick={() => addtoCart(props.id, quantity,item)} class={styles.button}>
+              <p>Add to Shopping Bag</p>
+              
+
+            </button>
           </div>
-          <div class={styles.variants}>
-              <For each={props.variants} fallback={<div></div>}>
-                  {(variant) => <option onclick={() => setSelected(variant.id)} >{variant.name}</option>}
-              </For>
-          </div>
-          <button onclick={() => addtoCart(props.id, quantity,   )} class={styles.button}>
-            <p>Add to Shopping Bag</p>
-          </button>
         </Motion.div>
       </div>
     </div>
