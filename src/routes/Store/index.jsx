@@ -43,7 +43,7 @@ export default function Store() {
   class ={styles.show}
   >
     <div class={styles.products} ref={element} onwheel={transformScroll}>
-      <For each={products()} fallback={<div></div>}>
+      <For each={products()} fallback={<div>Loading...</div>}>
         {(product) => (<Product  {...product}  />)}   
       </For> 
     </div>

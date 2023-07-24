@@ -11,7 +11,7 @@ export default function ProductPage(props){
   const [quantity, setQuantity] = createSignal(1)
   const [selected, setSelected] = createSignal(null)
   const [selectItem, setSelectedItem] = createSignal(null)
-  const { cart, setCart, setCartItems, cartItems } = useCartContext()
+  const { cart, setCart, setCartItems, cartItems, SetViewCart } = useCartContext()
 
   const item = {
     [props.variant_groups] : ""
@@ -23,13 +23,12 @@ export default function ProductPage(props){
   }, [selected()])
 
   
-  function addtoCart(id, amount, variant ){
-    commerce.cart.add(id, amount, variant).then(response => setCart(response)).catch(
+  async function addtoCart(id, amount, variant ){
+    await commerce.cart.add(id, amount, variant).then(response => setCart(response)).catch(
       console.log('there was an error')
     )
-    console.log(cart);
-    console.log(item)
     setCartItems(cart().total_items)
+    SetViewCart(true)
   }
 
   return(
@@ -53,7 +52,7 @@ export default function ProductPage(props){
           <p>{props.description}</p>
           <div class={styles.addtocart}>
             <select class={styles.variants} value={selected} onChange={e =>setSelected(e.target.value)}>
-              <option value="" selected hidden >Size</option>
+              <option value="" selected hidden > Select Size</option>
                 <For each={props.variants} fallback={<div></div>}>
                     {(variant) => <option value={variant.id} >{variant.name}</option>}
                 </For>

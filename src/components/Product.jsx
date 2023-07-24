@@ -11,7 +11,10 @@ export default function Product(props) {
    <A class={product.anchor} href={props.permalink}>
     <div class={product.wrapper}>
       <Motion.div 
-          hover={{ scale: 1.1 }}
+          hover={{ y:-20 }}
+          transition={{
+            duration: .5
+          }}
           class={product.product}>
         <img class ={product.img} src={props.image.url} alt='clothing' />
         <div  class={product.productdata}> 
