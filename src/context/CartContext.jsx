@@ -25,9 +25,6 @@ export const CartProvider = (props) => {
     };
 
     fetchCart();
-    commerce.products.list().then((res) =>{
-      setProducts(res.data)
-    });
   });
 
   return (
