@@ -208,7 +208,6 @@ option:hover {
     height: 100%;
     margin-right: 0;
     border: solid 1px rgb(255, 255, 255);
-    text-align: center;
   }
   .store {
     margin: 0;
@@ -279,6 +278,7 @@ option:hover {
     width: 100%;
     height: 100%;
     margin: 10px;
+    margin-bottom: 100px;
   }
   .button p {
     text-align: center;

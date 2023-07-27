@@ -24,11 +24,11 @@ export default function Store() {
   const [products, setProducts] = createSignal([])
 
 
-  createEffect(async ()=>{
-    await commerce.products.list().then((res) => {
+  createEffect(()=>{
+     commerce.products.list().then((res) => {
       setProducts(res.data); 
     });
-  },[products] )
+  },[products()] )
 
   return (
  
@@ -43,7 +43,7 @@ export default function Store() {
   class ={styles.show}
   >
     <div class={styles.products} ref={element} onwheel={transformScroll}>
-      <For each={products()} fallback={<div>Loading...</div>}>
+      <For each={products()} fallback={<h1>Loading...</h1>}>
         {(product) => (<Product  {...product}  />)}   
       </For> 
     </div>

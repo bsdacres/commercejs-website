@@ -16,7 +16,7 @@ export default function Product(props) {
             duration: .5
           }}
           class={product.product}>
-        <img class ={product.img} src={props.image.url} alt='clothing' />
+        <img class={product.img} src={props.image.url} alt='Loading' />
         <div  class={product.productdata}> 
           <p  class="product-title">{props.name}</p>
           <p>${props.price.raw}</p>
