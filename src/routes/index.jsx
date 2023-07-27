@@ -16,7 +16,7 @@ import { useCartContext } from "~/context/CartContext";
 export default function ({ merchant, categories, products }) {
   const { cart, setCart, viewCart, SetViewCart, cartItems, setCartItems } = useCartContext() 
   onMount(async ()=>{
-    commerce.cart.retrieve().then((cart) => setCart(cart));
+    await commerce.cart.retrieve().then((cart) => setCart(cart));
   }
   )
   return (

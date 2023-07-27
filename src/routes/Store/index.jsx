@@ -22,7 +22,7 @@ let element;
 
 export default function Store() {
   let loaded = false;
-  const [products, setProducts] = createSignal([])
+  const [products, setProducts] = createSignal(null)
 
 
 
