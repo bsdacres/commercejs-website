@@ -45,8 +45,8 @@ export default function Store() {
   class ={styles.show}
   >
     <div class={styles.products} ref={element} onwheel={transformScroll}>
-      <For each={products()} fallback={<h1 style={{color:"white", margin:"10px", width:"100vw", position:"relative", "z-index":20, "text-align":"center", height:"100vh"}}>Loading Products...</h1>}>
-        {(product) => (<Product  {...product}  />)}   
+      <For each={products()} fallback={<div  style={{color:"white", width:"100vw", position:"relative", "z-index":2000, "text-align":"center",height:"100vh", "background-color":"red", "font-size":"xxx-large", display:"flex", "align-content":"center", "justify-content":"center", "margin-top":"25vh"}}>Loading Products...</div>}>
+        {(product) => (<Product   {...product}  />)}   
       </For> 
     </div>
     <div class={styles.scroll}>
