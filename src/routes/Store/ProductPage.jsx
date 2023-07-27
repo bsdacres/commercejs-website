@@ -1,4 +1,4 @@
-import { createEffect, createSignal, useContext } from "solid-js"
+import { createEffect, createSignal, useContext, on } from "solid-js"
 import styles from "./styles.module.css"
 import commerce from "~/lib/commerce"
 import { Motion } from "@motionone/solid"
@@ -16,11 +16,13 @@ export default function ProductPage(props){
   const item = {
     [props.variant_groups] : ""
   }
-  createEffect(()=>{
-    item[props.variant_groups] = selected();
+
+
+  
+  createEffect(on(selected, (selected) => {
+    item[props.variant_groups] = selected;
     delete item.false
-    console.log(item)
-  }, [selected()])
+  }, { defer: false }));
 
   
   async function addtoCart(id, amount, variant ){
