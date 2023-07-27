@@ -1,4 +1,4 @@
-import { For, createEffect, createResource,createSignal, Show, ref, on} from "solid-js";
+import { For, createEffect, createResource,createSignal, Show, ref, on, onMount} from "solid-js";
 import commerce from "~/lib/commerce";
 import { useRouteData } from "solid-start";
 import { createRouteData } from "solid-start";
@@ -26,13 +26,13 @@ export default function Store() {
 
 
 
-  createEffect(on(products, (products) => {
+  onMount(on(products, (products) => {
     commerce.products.list().then((res) =>{
       setProducts(res.data)
     });
   }, { defer: false }));
 
-
+  console.log(products()?.image?.url)
   return (
  
  <>
@@ -41,7 +41,7 @@ export default function Store() {
   <Motion.Show
   animate={{ opacity: [0, 1]} }
   transition={{ duration: 3, easing: "ease-in-out" }}
-  when={products}
+  when={products()}
   fallback={<div></div>}
   class ={styles.show}
   >
