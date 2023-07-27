@@ -37,7 +37,7 @@ export default function Store() {
   <Motion.Show
   animate={{ opacity: [0, 1], x: [-1000, 0] } }
   transition={{ duration: 2, easing: "ease-in-out" }}
-  when={products()}
+  when={products[1]?.image.url}
   fallback={<div></div>}
   class ={styles.show}
   >
