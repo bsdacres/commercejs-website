@@ -1,4 +1,4 @@
-import { For, createEffect, createResource,createSignal, Show, ref} from "solid-js";
+import { For, createEffect, createResource,createSignal, Show, ref, on} from "solid-js";
 import commerce from "~/lib/commerce";
 import { useRouteData } from "solid-start";
 import { createRouteData } from "solid-start";
@@ -25,12 +25,13 @@ export default function Store() {
   const [products, setProducts] = createSignal([])
 
 
-  createEffect(()=>{
+
+  createEffect(on(products, (products) => {
     commerce.products.list().then((res) =>{
-      setProducts(res.data); 
-      loaded = true
+      setProducts(res.data)
     });
-  },[products()] )
+  }, { defer: false }));
+
 
   return (
  
@@ -40,12 +41,12 @@ export default function Store() {
   <Motion.Show
   animate={{ opacity: [0, 1]} }
   transition={{ duration: 3, easing: "ease-in-out" }}
-  when={loaded}
+  when={products}
   fallback={<div></div>}
   class ={styles.show}
   >
     <div class={styles.products} ref={element} onwheel={transformScroll}>
-      <For each={products()} fallback={<div  style={{color:"white", width:"100vw", position:"relative", "z-index":2000, "text-align":"center",height:"100vh", "background-color":"red", "font-size":"xxx-large", display:"flex", "align-content":"center", "justify-content":"center", "margin-top":"25vh"}}>Loading Products...</div>}>
+      <For each={products()} fallback={<div  style={{color:"white", width:"100vw", position:"relative", "z-index":2000, "text-align":"center",height:"100vh", "font-size":"xxx-large", display:"flex", "align-content":"center", "justify-content":"center", "margin-top":"25vh"}}>Loading Products...</div>}>
         {(product) => (<Product   {...product}  />)}   
       </For> 
     </div>
