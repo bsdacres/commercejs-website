@@ -6,6 +6,7 @@ import Product from "~/components/Product";
 import styles from "./styles.module.css"
 import ProductPage from "./ProductPage";
 import { Motion } from "@motionone/solid";
+import { useCartContext } from "~/context/CartContext"
 
 
 function transformScroll(event) {
@@ -22,16 +23,10 @@ let element;
 
 export default function Store() {
   let loaded = false;
-  const [products, setProducts] = createSignal(null)
+  const { products } = useCartContext()
 
 
-
-  onMount(on(products, (products) => {
-    commerce.products.list().then((res) =>{
-      setProducts(res.data)
-    });
-  }, { defer: false }));
-
+  
   console.log(products()?.image?.url)
   return (
  
