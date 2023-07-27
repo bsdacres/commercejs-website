@@ -24,10 +24,10 @@ export default function Store() {
   const [products, setProducts] = createSignal(null)
 
 
-  onMount(async ()=>{
+  createEffect(async ()=>{
     const { data } = await commerce.products.list();
     setProducts(data); 
-  })
+  }, [products()?.image.url])
 
   return (
  
