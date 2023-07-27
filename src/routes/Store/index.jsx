@@ -38,14 +38,14 @@ export default function Store() {
    
   <div class={styles.store} > 
   <Motion.Show
-  animate={{ opacity: [0, 1], x: [-1000, 0] } }
-  transition={{ duration: 2, easing: "ease-in-out" }}
+  animate={{ opacity: [0, 1]} }
+  transition={{ duration: 3, easing: "ease-in-out" }}
   when={loaded}
   fallback={<div></div>}
   class ={styles.show}
   >
     <div class={styles.products} ref={element} onwheel={transformScroll}>
-      <For each={products()} fallback={<h1>Loading Products...</h1>}>
+      <For each={products()} fallback={<h1 style={{color:"white", margin:"10px", width:"100vw", position:"relative", "z-index":20, "text-align":"center", height:"100vh"}}>Loading Products...</h1>}>
         {(product) => (<Product  {...product}  />)}   
       </For> 
     </div>
