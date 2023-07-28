@@ -39,7 +39,7 @@ console.log(props.image)
         <Motion.img
           animate={{ x: [-1000, 0] }}
           transition={{ duration: 2 , easing: "ease-in-out" }}
-          class={styles.productImg} src={props.image} onerror={console.log("error w/img")}/>
+          class={styles.productImg} src={props.image} onerror={console.log("img linK" + props.image )}/>
         <Motion.div 
           animate={{ x: [1000, 0] }}
           transition={{ duration: 2 , easing: "ease-in-out" }}
