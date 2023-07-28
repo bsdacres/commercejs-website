@@ -16,7 +16,7 @@ export default function Product(props) {
             duration: .5
           }}
           class={product.product}>
-        <img class={product.img} src={props.image.url} alt='Loading'  />
+        <img class={product.img} src={props.image.url} alt='Loading' onerror={console.log("img error")}  />
         <div  class={product.productdata}> 
           <p  class="product-title">{props.name}</p>
           <p>${props.price.raw}</p>

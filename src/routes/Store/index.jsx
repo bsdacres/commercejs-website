@@ -22,12 +22,6 @@ let element;
 
 export default function Store() {
  const {products, setProducts} = useCartContext()
-  createEffect(on(products, (products) => {
-    commerce.products.list({  sortBy: 'price',
-    sortOrder: 'desc',}).then((res) =>{
-      setProducts(res.data)
-    });
-  }, { defer: false }));
 
   return (
  
