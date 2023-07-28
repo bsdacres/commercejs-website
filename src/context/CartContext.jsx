@@ -13,14 +13,12 @@ export const CartProvider = (props) => {
   const [ cartItems, setCartItems ] =  createSignal(0)
   const [products, setProducts] = createSignal()
 
-
   createEffect(() => {
     const fetchCart = async () => {
       const carts = await commerce.cart.retrieve();
       setCart(carts);
-      commerce.products.list().then((res) =>{
-        setProducts(res.data)
-      });
+      const {data} = await commerce.products.list();
+      setProducts(data)
       console.log(cart())
     };
 
@@ -28,7 +26,7 @@ export const CartProvider = (props) => {
   });
 
   return (
-    <CartContext.Provider value={{ cart, setCart, viewCart, SetViewCart, cartItems, setCartItems, products }}>
+    <CartContext.Provider value={{ cart, setCart, viewCart, SetViewCart, cartItems, setCartItems, products, setProducts }}>
       {props.children}
     </CartContext.Provider>
   );

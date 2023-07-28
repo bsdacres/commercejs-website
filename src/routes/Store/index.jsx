@@ -1,4 +1,4 @@
-import { For, createEffect, createResource,createSignal, Show, ref, on, onMount} from "solid-js";
+import { For, createEffect, createResource,createSignal, Show, ref, on} from "solid-js";
 import commerce from "~/lib/commerce";
 import { useRouteData } from "solid-start";
 import { createRouteData } from "solid-start";
@@ -20,14 +20,15 @@ function transformScroll(event) {
 
 let element;
 
-
 export default function Store() {
-  let loaded = false;
-  const { products } = useCartContext()
+ const {products, setProducts} = useCartContext()
+  createEffect(on(products, (products) => {
+    commerce.products.list({  sortBy: 'price',
+    sortOrder: 'desc',}).then((res) =>{
+      setProducts(res.data)
+    });
+  }, { defer: false }));
 
-
-  
-  console.log(products()?.image?.url)
   return (
  
  <>
