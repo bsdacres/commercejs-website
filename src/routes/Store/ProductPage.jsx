@@ -11,14 +11,13 @@ export default function ProductPage(props){
   const [quantity, setQuantity] = createSignal(1)
   const [selected, setSelected] = createSignal(null)
   const [selectItem, setSelectedItem] = createSignal(null)
-  const [img, setImg] = createSignal(props.image)
   const { cart, setCart, setCartItems, cartItems, SetViewCart } = useCartContext()
 
   const item = {
     [props.variant_groups] : ""
   }
 
-  console.log(img())
+console.log(props.image)
   
   createEffect(on(selected, (selected) => {
     item[props.variant_groups] = selected;
@@ -40,7 +39,7 @@ export default function ProductPage(props){
         <Motion.img
           animate={{ x: [-1000, 0] }}
           transition={{ duration: 2 , easing: "ease-in-out" }}
-          class={styles.productImg} src={img()} />
+          class={styles.productImg} src={props.image} onerror={console.log("error w/img")}/>
         <Motion.div 
           animate={{ x: [1000, 0] }}
           transition={{ duration: 2 , easing: "ease-in-out" }}
