@@ -35,7 +35,7 @@ export default function Products() {
       <Title>Covenaunt | {listing() &&  listing().name}</Title>
         <ProductPage 
         name = {listing() && listing().name}
-        image = {listing() && listing().assets[0].url}
+        image = {listing() && listing().permalink}
         price = {listing() && listing().price.raw}
         description = {listing() && listing().description.replaceAll(regex, "")}
         variants = {variants() && variants()}
