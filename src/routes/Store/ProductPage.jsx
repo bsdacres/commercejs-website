@@ -11,9 +11,6 @@ const [selected, setSelected] = createStore({})
 
 export default function ProductPage(props){
   const [quantity, setQuantity] = createSignal(1)
-<<<<<<< HEAD
-  const { cart, setCart, setCartItems, cartItems } = useCartContext()
-=======
   const [selected, setSelected] = createSignal(null)
   const [selectItem, setSelectedItem] = createSignal(null)
   const { cart, setCart, setCartItems, cartItems, SetViewCart } = useCartContext()
@@ -23,7 +20,6 @@ export default function ProductPage(props){
   }
 
 console.log(props.image)
->>>>>>> 91e1eb30e0098f5350906071da9ef40dfb9fdc04
   
   createEffect(on(selected, (selected) => {
     item[props.variant_groups] = selected;
@@ -69,7 +65,6 @@ console.log(props.image)
             </p>
             <p>{props.description}</p>
           </div>
-<<<<<<< HEAD
           <p>{props.description}</p>
           <div>
             <p>
@@ -84,8 +79,6 @@ console.log(props.image)
           <button onclick={() => addtoCart(props.id, quantity,)} class={styles.button}>
             <p>Add to Shopping Bag</p>
           </button>
-=======
->>>>>>> 91e1eb30e0098f5350906071da9ef40dfb9fdc04
         </Motion.div>
       </div>
     </div>
