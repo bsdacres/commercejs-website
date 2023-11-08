@@ -55,15 +55,15 @@
   height: 80vh;
   border-radius: 20px;
   margin-right: 2vw;
-  filter: drop-shadow(0 0mm 2mm rgb(15, 10, 17));
+  filter: drop-shadow(0 0mm 2mm rgb(27, 14, 32));
 }
 
 .productContainer {
-  width: 57vw;
+  width: 60vw;
   height: 80vh;
   display: flex;
   flex-wrap: wrap;
-  background-color: rgba(255, 255, 255, 0);
+  background-color: rgba(72, 22, 153, 0.02);
   -webkit-backdrop-filter: blur(40px);
           backdrop-filter: blur(40px);
   border-radius: 20px;
@@ -76,7 +76,7 @@
   justify-items: center;
   height: 80vh;
   align-items: center;
-  color: rgb(255, 255, 255);
+  color: rgb(230, 230, 230);
 }
 .productData P {
   font-size: large;
@@ -247,7 +247,7 @@ option:hover {
     margin: 0 auto;
   }
   .productContainer {
-    width: 100%;
+    width: 180%;
     height: -moz-fit-content;
     height: fit-content;
     justify-content: center;

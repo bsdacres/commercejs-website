@@ -6,6 +6,7 @@ import Product from "~/components/Product";
 import styles from "./styles.module.css"
 import ProductPage from "./ProductPage";
 import { Motion } from "@motionone/solid";
+import { useCartContext } from "~/context/CartContext";
 
 function transformScroll(event) {
   if (!event.deltaY) {

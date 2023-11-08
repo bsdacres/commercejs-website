@@ -71,14 +71,6 @@ console.log(props.image)
               Ready-to-Wear
             </p>
           </div>
-          <div class={styles.variants}>
-              <For each={props.variants} fallback={<div></div>}>
-                  {(variant) => <option onclick={() => setSelected(variant.id)} >{variant.name}</option>}
-              </For>
-          </div>
-          <button onclick={() => addtoCart(props.id, quantity,)} class={styles.button}>
-            <p>Add to Shopping Bag</p>
-          </button>
         </Motion.div>
       </div>
     </div>
