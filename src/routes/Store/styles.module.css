@@ -45,8 +45,6 @@
   width: 100%;
   height: 94vh;
   z-index: 1;
-  -webkit-backdrop-filter: blur(20px);
-          backdrop-filter: blur(20px);
   display: flex;
   justify-content: center;
   margin-top: 6vh;
@@ -73,31 +71,30 @@
 }
 
 .productData {
-  width: 40%;
+  width: 50%;
   position: relative;
   justify-items: center;
-  height: -moz-fit-content;
-  height: fit-content;
-  align-self: center;
+  height: 80vh;
+  align-items: center;
   color: rgb(255, 255, 255);
 }
 .productData P {
-  font-size: 1.5em;
+  font-size: large;
 }
 
 .button {
   color: rgb(218, 218, 218);
   border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.842);
+  background-color: transparent;
   display: flex;
   flex-direction: row;
   -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
   font-size: 1.5em;
   align-items: center;
-  border: solid 1px black;
-  width: 40%;
-  height: 5%;
+  border: solid 1px rgb(255, 255, 255);
+  width: 80%;
+  height: 100%;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: bold;
@@ -112,24 +109,20 @@
   font-size: larger;
   height: 95%;
   width: 15%;
-  background-color: rgb(238, 243, 241);
+  background-color: rgb(35, 202, 135);
 }
 
 .variants {
   display: flex;
   flex-direction: row;
   margin-right: 10px;
-  font-size: 2.2em;
-}
-.variants a {
-  background-color: grey;
+  background-color: transparent;
+  color: white;
   border-radius: 10px;
-  padding: 0px 20px;
-  margin: 5px 10px;
-  margin-bottom: 3vh;
-}
-.variants :hover {
-  filter: invert(1);
+  font-size: small;
+  text-transform: uppercase;
+  height: 100%;
+  border: solid 1px rgb(255, 255, 255);
 }
 
 .scroll {
@@ -143,8 +136,17 @@
   animation: blink 5s infinite ease-in-out;
 }
 
+.addtocart {
+  display: flex;
+  flex-direction: row;
+  height: 5.5vh;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .prodtitle {
   color: white;
+  margin-bottom: 0;
 }
 
 @keyframes blink {
@@ -164,6 +166,7 @@ option {
   padding: 0px 15px;
   margin: 5px 10px;
   margin-bottom: 3vh;
+  font-size: x-large;
 }
 option :hover {
   cursor: pointer;
@@ -173,7 +176,42 @@ option:hover {
   cursor: pointer;
 }
 
+.price {
+  font-size: xxx-large !important;
+  text-align: left;
+}
+
 @media only screen and (max-width: 600px) {
+  .text {
+    margin-top: 10px;
+    position: relative;
+    z-index: -2;
+    margin-top: 50px;
+  }
+  .price {
+    text-align: center;
+  }
+  .addtocart {
+    display: flex;
+    flex-direction: column;
+    height: 7vh;
+    align-items: center;
+    justify-items: center;
+    align-self: center;
+    width: 80%;
+  }
+  .variants {
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+    color: white;
+    border-radius: 10px;
+    font-size: small;
+    text-transform: uppercase;
+    height: 100%;
+    margin-right: 0;
+    border: solid 1px rgb(255, 255, 255);
+  }
   .store {
     margin: 0;
   }
@@ -202,7 +240,7 @@ option:hover {
     justify-content: center;
   }
   .productImg {
-    width: 100vw;
+    width: 90vw;
     height: 70vh;
     filter: drop-shadow(0 0mm 2mm rgba(15, 10, 17, 0));
     z-index: 2;
@@ -213,41 +251,37 @@ option:hover {
     height: -moz-fit-content;
     height: fit-content;
     justify-content: center;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
+    margin-bottom: px;
     background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0));
   }
   .productData {
     text-align: center;
     display: flex;
-    margin-left: 0px;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(10, 10, 10, 0.404);
-    border-radius: 0 0px 20px 20px;
-    margin-top: -1.5vh;
+    justify-content: start;
     width: 125vw;
     -webkit-backdrop-filter: blur(20px);
             backdrop-filter: blur(20px);
     gap: 0;
   }
-  .productData P {
-    font-size: 1em;
-    margin: 10px;
+  .productData p {
+    font-size: 1.3em;
+    margin: 20px;
+    width: 500px;
+    margin-top: 30px;
+    position: relative;
   }
   .button {
-    color: rgb(218, 218, 218);
-    border-radius: 20px;
-    -webkit-backdrop-filter: blur(20px);
-            backdrop-filter: blur(20px);
-    font-size: 0.7em;
-    text-align: right;
-    width: 50vw;
-    height: 7vh;
-  }
-  .button p {
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    font-size: 0.8em;
+    width: 100%;
+    height: 100%;
+    margin: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
     text-align: center;
-    width: 50vw;
   }
   .button :hover {
     cursor: pointer;
@@ -256,9 +290,10 @@ option:hover {
     display: flex;
     flex-direction: row;
     align-self: center;
-    font-size: 2.2em;
+    font-size: 1.2em;
     width: 100%;
     justify-content: center;
+    text-align: center;
   }
   .variants a {
     background-color: grey;

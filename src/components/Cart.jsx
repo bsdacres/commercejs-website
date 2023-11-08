@@ -1,4 +1,4 @@
-import { For, createEffect, createSignal, onMount } from "solid-js"
+import { For, createEffect, createSignal, Suspense } from "solid-js"
 import LineComponent from "./LineComponent"
 import { useCartContext } from "~/context/CartContext"
 import styles from "./styles.module.css"
@@ -12,24 +12,28 @@ export default function Cart(){
   const [total, setTotal] = createStore()
   const { cart } = useCartContext()
 
-  onMount(()=>{
-    setLineItems(cart())
+  createEffect(async()=>{
+    setLineItems(await cart())
     console.log(lineItems)
 
     if(lineItems){
       setTotal(lineItems.subtotal)
     }
-  })
+  }, [cart])
 
   return(
+ <Suspense fallback={<p>Loading...</p>}>
    <div class={styles.cart}>
     <Motion.div 
     animate={{ x: [2000, 1] } }
     transition={{ duration: 1, easing: "ease-in-out" }}
-    exit={{ x: [1,2000 ], transition: { duration: 1 } } }
+    exit={{ x: [1,2000 ], transition: { duration: 3 } } }
     class={styles.lineContainer}>
       <For each={lineItems.line_items} fallback={<div class={styles.fallback}>Your Cart is Empty</div>}>
-          {(line) => (<LineComponent  {...line}  />)}   
+          {(line) => (<LineComponent
+          selected_options = "large"
+          
+          {...line}  />)}   
       </For>
     </Motion.div> 
     <Motion.div 
@@ -43,5 +47,6 @@ export default function Cart(){
         <a href={lineItems.hosted_checkout_url}>Proceed to Checkout</a> 
       </Motion.div>
    </div> 
+  </Suspense>
   )
 }

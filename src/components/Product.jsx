@@ -8,12 +8,15 @@ import { Motion } from '@motionone/solid';
 export default function Product(props) {
   return (
  <>
-   <A class={product.anchor} href={props.permalink}>
+   <A class={product.anchor} href={props.permalink} onchange={console.log("something Changed")}>
     <div class={product.wrapper}>
       <Motion.div 
-          hover={{ scale: 1.1 }}
+          hover={{ y:-20 }}
+          transition={{
+            duration: .5
+          }}
           class={product.product}>
-        <img class ={product.img} src={props.image.url} alt='clothing' />
+        <img class={product.img} src={`/assets/${props.permalink}.jpg`} alt='Loading' onerror={console.log("img linK" + props.image.url )}  height={800} width={600}/>
         <div  class={product.productdata}> 
           <p  class="product-title">{props.name}</p>
           <p>${props.price.raw}</p>
