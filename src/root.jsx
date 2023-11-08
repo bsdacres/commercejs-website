@@ -1,9 +1,10 @@
 // @refresh reload
-import { Suspense, onMount } from "solid-js";
+import { Suspense, onMount, onCleanup } from "solid-js";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { CartProvider } from "./context/CartContext";
 import { useCartContext } from "~/context/CartContext"
+import { useAssets } from "solid-js/web";
 import {
   A,
   Body,
@@ -20,10 +21,20 @@ import "./root.css";
 
 
 
+
 export default function Root() {
+if(typeof window !== "undefined"){
+  let d = window.document;
+  let script = d.createElement('script')
+  onCleanup(() => script.remove());
+}
+
+const gtag = () =>{
+  
+}
+
   return (
     <Html lang="en">
-      
       <Head>
         <Title>Covenaunt - Fantasy sung through Fabric</Title>
         <Meta charset="utf-8" />
@@ -32,6 +43,7 @@ export default function Root() {
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest"></link>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=N2D26SW3"></script>
       </Head>
       <Body>
         <Suspense>

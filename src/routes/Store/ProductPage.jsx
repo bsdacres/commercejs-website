@@ -6,10 +6,11 @@ import { useCartContext } from "~/context/CartContext"
 import { createStore } from "solid-js/store"
 
 
+const [selected, setSelected] = createStore({})
+
 
 export default function ProductPage(props){
   const [quantity, setQuantity] = createSignal(1)
-  const [selected, setSelected] = createStore(null)
   const { cart, setCart, setCartItems, cartItems } = useCartContext()
   
   function addtoCart(id, amount, variant ){
@@ -49,7 +50,7 @@ export default function ProductPage(props){
                   {(variant) => <option onclick={() => setSelected(variant.id)} >{variant.name}</option>}
               </For>
           </div>
-          <button onclick={() => addtoCart(props.id, quantity,   )} class={styles.button}>
+          <button onclick={() => addtoCart(props.id, quantity,)} class={styles.button}>
             <p>Add to Shopping Bag</p>
           </button>
         </Motion.div>

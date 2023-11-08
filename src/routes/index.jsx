@@ -8,7 +8,9 @@ import  styles  from "./styles.module.css"
 import { Motion } from "@motionone/solid";
 import ProductPage from "./Store/ProductPage";
 import Product from "~/components/Product";
+import GoogleTagManager from "~/components/GoogleTagManager";
 import { useCartContext } from "~/context/CartContext";
+
 
 
 
@@ -22,7 +24,6 @@ export default function ({ merchant, categories, products }) {
   return (
 
   <>
-    
     <Motion.div
     class={styles.landing}
 

@@ -6,6 +6,15 @@ import Product from "~/components/Product";
 import styles from "./styles.module.css"
 import ProductPage from "./ProductPage";
 import { Motion } from "@motionone/solid";
+import { createScriptLoader } from "@solid-primitives/script-loader";
+
+createScriptLoader({
+  src: 'https://connect.facebook.net/en_US/fbevents.js',
+  onLoad() {
+    window.fbq('init', 'pixel ID');
+    window.fbq('track', 'PageView');
+  }
+});
 
 
 function transformScroll(event) {
