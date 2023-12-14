@@ -65,7 +65,6 @@ console.log(props.image)
             </p>
             <p>{props.description}</p>
           </div>
-          <p>{props.description}</p>
           <div>
             <p>
               Ready-to-Wear
